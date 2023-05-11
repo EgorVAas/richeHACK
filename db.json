@@ -1,0 +1,460 @@
+{
+  "wine": [
+    {
+      "name": "Chateau Lafite Rothschild",
+      "photo": "https://static.simplewine.ru/upload/iblock/d27/vino-chateau-lafite-rothschild-2007_1.png@x430?fmt=webp",
+      "year": "2007",
+      "country": "Франция, Бордо",
+      "type": "Красное, сухое",
+      "grapes": "каберне совиньон 84%, мерло 15%, пти вердо 1%",
+      "strong": "12.5%",
+      "volume": "0.75 л",
+      "price": "242 490 ₽",
+      "id": 1
+    },
+    {
+      "name": "L'Ermita Velles Vinyes, Alvaro Palacios",
+      "photo": "https://static.simplewine.ru/upload/iblock/565/vino-l-ermita-velles-vinyes-alvaro-palacios-2011_1.png@x430?fmt=webp",
+      "year": "2011",
+      "country": "Испания, Каталония",
+      "type": "Красное, сухое",
+      "grapes": "гарнача 100%",
+      "strong": "15%",
+      "volume": "0.75 л",
+      "price": "184 990 ₽",
+      "id": 2
+    },
+    {
+      "name": "Sassicaia, Tenuta San Guido",
+      "photo": "https://static.simplewine.ru/upload/iblock/90a/90a06ed8fc56042b50837d14f82158b6.png@x430?fmt=webp",
+      "year": "2018",
+      "country": "Италия, Тоскана",
+      "type": "Красное, сухое",
+      "grapes": "каберне совиньон 85%, каберне фран 15%",
+      "strong": "13.5%",
+      "volume": "6 л",
+      "price": "1 849 990 ₽",
+      "id": 3
+    },
+    {
+      "name": "Galatrona, Petrolo",
+      "photo": "https://static.simplewine.ru/upload/iblock/bb6/bb6326647f2fbd98e8ef16797b243a85.png@x430?fmt=webp",
+      "year": "2019",
+      "country": "Италия, Тоскана",
+      "type": "Красное, сухое",
+      "grapes": "мерло 100%",
+      "strong": "14%",
+      "volume": "6 л",
+      "price": "249 990 ₽",
+      "id": 4
+    },
+    {
+      "name": "Chateau Palmer",
+      "photo": "https://static.simplewine.ru/upload/iblock/3a8/3a8a3596be81158a101132a52ce11b11.png@x430?fmt=webp",
+      "year": "1981",
+      "country": "Франция, Бордо",
+      "type": "Красное, сухое",
+      "grapes": "каберне совиньон 54%, мерло 37%, пти вердо 7%, каберне фран 2%",
+      "strong": "12.5%",
+      "volume": "1.5 л",
+      "price": "222 990 ₽",
+      "id": 5
+    },
+    {
+      "name": "Alzero, Giuseppe Quintarelli",
+      "photo": "https://static.simplewine.ru/upload/iblock/d9c/d9c97a9f55cc0cf170223e44f58a47e5.png@x430?fmt=webp",
+      "year": "1997",
+      "country": "Италия, Венето",
+      "type": "Красное, сладкое",
+      "grapes": "каберне совиньон 40%, каберне фран 40%, мерло 20%",
+      "strong": "15%",
+      "volume": "1.5 л",
+      "price": "299 990 ₽",
+      "id": 6
+    },
+    {
+      "name": "Corton-Charlemagne Grand Cru, Domaine Bonneau du Martray",
+      "photo": "https://static.simplewine.ru/upload/iblock/d1a/d1a55f05217b00ae181bf727b5383ab4.png@x430?fmt=webp",
+      "year": "2019",
+      "country": "Франция, Бургундия",
+      "type": "Белое, сухое",
+      "grapes": "шардоне 100%",
+      "strong": "13.5%",
+      "volume": "3 л",
+      "price": "334 990 ₽",
+      "id": 7
+    },
+    {
+      "name": "Tokaji Eszencia, Oremus",
+      "photo": "https://static.simplewine.ru/upload/iblock/a09/a09d6970631f11fe53d9cc7edaba6148.png@x430?fmt=webp",
+      "year": "2009",
+      "country": "Венгрия, Токай",
+      "type": "Белое, сладкое",
+      "grapes": "фурминт, харшлевелю, зета, шарга мушкотали",
+      "strong": "3%",
+      "volume": "0.375 л",
+      "price": "104 990 ₽",
+      "id": 8
+    },
+    {
+      "name": "L’Hermitage Blanc , Jean-Louis Chave",
+      "photo": "https://static.simplewine.ru/upload/iblock/f4d/f4dc778ea49ec7330ac96e4a32f096c8.jpg@x430?fmt=webp",
+      "year": "2015",
+      "country": "Франция, Долина Роны",
+      "type": "Белое, сухое",
+      "grapes": "марсан 85%, руссан 15%",
+      "strong": "14.5%",
+      "volume": "0.75 л",
+      "price": "124 990 ₽",
+      "id": 9
+    },
+    {
+      "name": "Montrachet Grand Cru, Bouchard Pere & Fils",
+      "photo": "https://static.simplewine.ru/upload/iblock/844/vino-montrachet-grand-cru-bouchard-pere-fils-2013_3.png@x430?fmt=webp",
+      "year": "2013",
+      "country": "Франция, Бургундия",
+      "type": "Белое, сухое",
+      "grapes": "шардоне 100%",
+      "strong": "13.5%",
+      "volume": "0.75 л",
+      "price": "219 990 ₽",
+      "id": 10
+    },
+    {
+      "name": "Corton-Charlemagne Grand Cru, Domaine Bonneau du Martray",
+      "photo": "https://static.simplewine.ru/upload/iblock/f65/f65df9f991b02426b42c71a2340b3ad7.png@x430?fmt=webp",
+      "year": "2018",
+      "country": "Франция, Бургундия",
+      "type": "Белое, сухое",
+      "grapes": "шардоне 100%",
+      "strong": "13.5%",
+      "volume": "1.5 л",
+      "price": "114 990 ₽",
+      "id": 11
+    },
+    {
+      "name": "Puligny-Montrachet Premier Cru Les Referts, Domaine Arnaud Ente",
+      "photo": "https://static.simplewine.ru/upload/iblock/fb3/fb305eaccaf8b11f2122183a158e2a29.png@x430?fmt=webp",
+      "year": "2016",
+      "country": "Франция, Бургундия",
+      "type": "Белое, сухое",
+      "grapes": "шардоне 100%",
+      "strong": "12%",
+      "volume": "1.5 л",
+      "price": "374 990 ₽",
+      "id": 12
+    }
+  ],
+  "whiskey": [
+    {
+      "name": "Bunnahabhain 1980 Limited Edition",
+      "photo": "https://img.thewhiskyexchange.com/900/bunob.1980v1.jpg",
+      "year": "1980",
+      "country": "Шотландия, Айла",
+      "type": "Односолодовый",
+      "barrel": "Из под хереса",
+      "strong": "49.5%",
+      "volume": "0.7 л",
+      "price": "624 990 ₽",
+      "id": 1
+    },
+    {
+      "name": "Rosebank Aged 30 Years",
+      "photo": "https://static.simplewine.ru/upload/iblock/bde/bdec925bc5529ba5e4cdcb7c0b5118c9.png@x430?fmt=webp",
+      "year": "1993",
+      "country": "Шотландия",
+      "type": "Односолодовый",
+      "barrel": "из под хереса и бурбона",
+      "strong": "48.6%",
+      "volume": "0.7 л",
+      "price": "399 990 ₽",
+      "id": 2
+    },
+    {
+      "name": "Braes of Glenlivet Aged 27 Years",
+      "photo": "https://static.simplewine.ru/upload/iblock/dc8/dc86ec26515a015acbca11961b2ce573.jpg@x430?fmt=webp",
+      "year": "1996",
+      "country": "Шотландия, Спейсайд",
+      "type": "Односолодовый",
+      "barrel": "из американского дуба",
+      "strong": "48%",
+      "volume": "0.7 л",
+      "price": "73 900 ₽",
+      "id": 3
+    },
+    {
+      "name": "Glen Keith 25 Years Old",
+      "photo": "https://static.simplewine.ru/upload/iblock/aec/aec09f975d3273cea937b38035f43336.jpg@x430?fmt=webp",
+      "year": "1998",
+      "country": "Шотландия, Спейсайд",
+      "type": "Односолодовый",
+      "barrel": "из американского дуба и бочках hogsheads и butts",
+      "strong": "43%",
+      "volume": "0.7 л",
+      "price": "59 990 ₽",
+      "id": 4
+    },
+    {
+      "name": "Michter's 10-Years Bourbon Whiskey",
+      "photo": "https://static.simplewine.ru/upload/iblock/0f9/viski-michter-s-10-years-bourbon-whiskey_1.png@x430?fmt=webp",
+      "year": "2013",
+      "country": "Соединенные Штаты Америки, Кентукки",
+      "type": "Бурбон",
+      "barrel": "из новых, обожжёных бочках из американского дуба",
+      "strong": "47.2%",
+      "volume": "0.7 л",
+      "price": "29 990 ₽",
+      "id": 5
+    },
+    {
+      "name": "Kavalan Solist Vinho Barrique Cask Single Cask Strength",
+      "photo": "https://static.simplewine.ru/upload/iblock/085/08580be1e7d303a2df81524fab1c62cf.jpg@x430?fmt=webp",
+      "year": "2020",
+      "country": "Тайвань, И-Лан",
+      "type": "Односолодовый",
+      "barrel": "100% в маленьких, специально обработанных бочках из-под красного вина. Бочки были «побриты»-«поджарены»-«повторно обуглены»",
+      "strong": "54%",
+      "volume": "0.7 л",
+      "price": "29 590 ₽",
+      "id": 6
+    },
+    {
+      "name": "Chivas Royal Salute 21 years old",
+      "photo": "https://static.simplewine.ru/upload/iblock/eec/eec98d10b140f58d2efbb5daf68a2cb0.png@x430?fmt=webp",
+      "year": "2002",
+      "country": "Соединенное Королевство, Шотландия",
+      "type": "Купажированный",
+      "barrel": "из дуба",
+      "strong": "40%",
+      "volume": "0.7 л",
+      "price": "28 940 ₽",
+      "id": 7
+    },
+    {
+      "name": "Bunnahabhain Aged 25 Years",
+      "photo": "https://static.simplewine.ru/upload/iblock/583/5839a489bc35d2a421b67a812abee856.png@x430?fmt=webp",
+      "year": "1998",
+      "country": "Шотландия, Айла",
+      "type": "Односолодовый",
+      "barrel": "из дуба",
+      "strong": "46.3%",
+      "volume": "0.7 л",
+      "price": "99 990 ₽",
+      "id": 8
+    },
+    {
+      "name": "Caperdonich 25 Years Old",
+      "photo": "https://static.simplewine.ru/upload/iblock/bcc/bcc6c6ddd2e49983a164a66853fffa82.jpg@x430?fmt=webp",
+      "year": "1998",
+      "country": "Шотландия, Спейсайд",
+      "type": "Односолодовый",
+      "barrel": "из американского дуба",
+      "strong": "48%",
+      "volume": "0.7 л",
+      "price": "73 290 ₽",
+      "id": 9
+    },
+    {
+      "name": "Dalwhinnie 30 YO SR’20",
+      "photo": "https://static.simplewine.ru/upload/iblock/31b/31b75670949398f0c05fd242c592bdd8.png@x430?fmt=webp",
+      "year": "1989",
+      "country": "Соединенное Королевство, Шотландия",
+      "type": "Односолодовый",
+      "barrel": "из дуба",
+      "strong": "54.7%",
+      "volume": "0.7 л",
+      "price": "69 990 ₽",
+      "id": 10
+    },
+    {
+      "name": "Nikka Yoichi Single Malt Non-Peated",
+      "photo": "https://static.simplewine.ru/upload/iblock/584/5840d041fd0a91b806deb8c6b193d0d8.png@x430?fmt=webp",
+      "year": "1991",
+      "country": "Япония",
+      "type": "Односолодовый",
+      "barrel": "из белого американского дуба",
+      "strong": "47%",
+      "volume": "0.7 л",
+      "price": "54 990 ₽",
+      "id": 11
+    },
+    {
+      "name": "Talisker 8 Years",
+      "photo": "https://static.simplewine.ru/upload/iblock/2e8/2e8d458bb4d0beea800f546fde4e1ad8.jpg@x430?fmt=webp",
+      "year": "2017",
+      "country": "Шотландия",
+      "type": "Односолодовый",
+      "barrel": "из-под рома",
+      "strong": "59.7%",
+      "volume": "0.7 л",
+      "price": "25 590 ₽",
+      "id": 12
+    }
+  ],
+  "liquor": [
+    {
+      "name": "Quintessentia Amaro Nonino",
+      "photo": "https://static.simplewine.ru/upload/iblock/508/508d45814ff9585ad14da3900bf81d22.png@x430?fmt=webp",
+      "country": "Италия, Фриули-Венеция-Джулия",
+      "strong": "35%",
+      "volume": "0.7 л",
+      "price": "4 490 ₽",
+      "id": 1
+    },
+    {
+      "name": "Nonino Botanical Drink",
+      "photo": "https://static.simplewine.ru/upload/iblock/2c4/2c4a8791fd79539f51c004576a60bbee.png@x430?fmt=webp",
+      "country": "Италия, Фриули-Венеция-Джулия",
+      "strong": "21%",
+      "volume": "0.7 л",
+      "price": "4 490 ₽",
+      "id": 2
+    },
+    {
+      "name": "Monnet's Salamander",
+      "photo": "https://static.simplewine.ru/upload/iblock/1f6/1f6d844041f7389292921144d9d5d2d2.png@x430?fmt=webp",
+      "country": "Франция, Коньяк",
+      "strong": "30%",
+      "volume": "0.5 л",
+      "price": "2 790 ₽",
+      "id": 3
+    },
+    {
+      "name": "Baileys",
+      "photo": "https://static.simplewine.ru/upload/iblock/5a6/5a6b527d82c1a96b15fdf03cba79d8b1.png@x430?fmt=webp",
+      "country": "Ирландия",
+      "strong": "17%",
+      "volume": "0.7 л",
+      "price": "1 690 ₽",
+      "id": 4
+    },
+    {
+      "name": "Саке KOI",
+      "photo": "https://static.simplewine.ru/upload/iblock/926/sake-koi_3.png@x430?fmt=webp",
+      "country": "Япония, Ниигата",
+      "strong": "17%",
+      "volume": "0.72 л",
+      "price": "13 990 ₽",
+      "id": 5
+    },
+    {
+      "name": "Саке Dewatsuru Junmai Daiginjo Hihaku",
+      "photo": "https://static.simplewine.ru/upload/iblock/0b5/0b5af15d98ecc77d5eebfa627b01aabb.png@x430?fmt=webp",
+      "country": "Япония, Акита",
+      "strong": "16%",
+      "volume": "0.72 л",
+      "price": "8 490 ₽",
+      "id": 6
+    },
+    {
+      "name": "Kaiun Junmai Daiginjo",
+      "photo": "https://static.simplewine.ru/upload/iblock/ba6/sake-kaiun-junmai-daiginjo_5.png@x430?fmt=webp",
+      "country": "Япония, Сидзуока",
+      "strong": "16%",
+      "volume": "0.72 л",
+      "price": "7 990 ₽",
+      "id": 7
+    },
+    {
+      "name": "Grand Marnier Cordon rouge",
+      "photo": "https://static.simplewine.ru/upload/iblock/75a/75a8b5950ffc59b1892b46bf667ffaab.png@x430?fmt=webp",
+      "country": "Франция, Коньяк",
+      "strong": "40%",
+      "volume": "0.7 л",
+      "price": "3 990 ₽",
+      "id": 8
+    },
+    {
+      "name": "Prunella Mandorlata",
+      "photo": "https://static.simplewine.ru/upload/iblock/48b/liker-prunella-mandorlata_1.png@x430?fmt=webp",
+      "country": "Италия, Фриули-Венеция-Джулия",
+      "strong": "33%",
+      "volume": "0.7 л",
+      "price": "3 990 ₽",
+      "id": 9
+    },
+    {
+      "name": "Portobello Road Sloeberry and Blackcurrant",
+      "photo": "https://static.simplewine.ru/upload/iblock/4f1/4f1a43be5ea1daef8c8348a8b01f2434.png@x430?fmt=webp",
+      "country": "Соединенное Королевство",
+      "strong": "28%",
+      "volume": "0.5 л",
+      "price": "4 790 ₽",
+      "id": 10
+    },
+    {
+      "name": "Саке Umenishiki Hime no Ai Tenmi",
+      "photo": "https://static.simplewine.ru/upload/iblock/d7d/sake-umenishiki-hime-no-ai-tenmi_3.png@x430?fmt=webp",
+      "country": "Япония, Эхимэ",
+      "strong": "15.4%",
+      "volume": "0.75 л",
+      "price": "12 490 ₽",
+      "id": 11
+    },
+    {
+      "name": "Amaro Santoni",
+      "photo": "https://static.simplewine.ru/upload/iblock/11d/11d109a6029077c6a5f08ec5331e04fc.png@x430?fmt=webp",
+      "country": "Италия, Тоскана",
+      "strong": "16%",
+      "volume": "0.5 л",
+      "price": "3 990 ₽",
+      "id": 12
+    }
+  ],
+  "gin": [
+    {
+      "name": "Nikka Coffey Gin",
+      "photo": "https://static.simplewine.ru/upload/iblock/3d7/3d79456ed46efa6a631630318d4c8495.png@x430?fmt=webp",
+      "country": "Япония, Мияги",
+      "strong": "47%",
+      "volume": "0.7 л",
+      "price": "9 990 ₽",
+      "id": 1
+    },
+    {
+      "name": "Valdespino Dry Gin",
+      "photo": "https://static.simplewine.ru/upload/iblock/971/97154b041088b7135d02701277a3bfe4.png@x430?fmt=webp",
+      "country": "Испания, Андалусия",
+      "strong": "41.3%",
+      "volume": "0.7 л",
+      "price": "8 990 ₽",
+      "id": 2
+    },
+    {
+      "name": "Monkey 47 Schwarzwald Dry Gin",
+      "photo": "https://static.simplewine.ru/upload/iblock/ac6/ac65ed61dfc43984b87cacd17f3bfcc2.png@x430?fmt=webp",
+      "country": "Германия",
+      "strong": "47%",
+      "volume": "0.5 л",
+      "price": "8 890 ₽",
+      "id": 3
+    },
+    {
+      "name": "Gin Mare Capri",
+      "photo": "https://static.simplewine.ru/upload/iblock/4b0/4b030b97038797fc4c7d9a60a1407a72.png@x430?fmt=webp",
+      "country": "Испания, Каталония",
+      "strong": "42.7%",
+      "volume": "0.7 л",
+      "price": "6 890 ₽",
+      "id": 4
+    },
+    {
+      "name": "Drumshanbo Gunpowder Irish Gin",
+      "photo": "https://static.simplewine.ru/upload/iblock/436/436a1b26faa558fed7bded43b638fc4e.png@x430?fmt=webp",
+      "country": "Ирландия",
+      "strong": "43%",
+      "volume": "0.7 л",
+      "price": "5 490 ₽",
+      "id": 5
+    },
+    {
+      "name": "Drumshanbo With Sardinian Citrus Gunpowder Irish Gin",
+      "photo": "https://static.simplewine.ru/upload/iblock/2d3/2d3a25358098d01274cb08b655c3ddd3.png@x430?fmt=webp",
+      "country": "Ирландия",
+      "strong": "43%",
+      "volume": "0.7 л",
+      "price": "4 790 ₽",
+      "id": 6
+    }
+  ]
+}
