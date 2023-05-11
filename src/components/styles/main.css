@@ -1,0 +1,41 @@
+.Main__container{
+    text-align: center;
+    height: 1000px;
+}
+.div{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-image: url(../../assets/bgMain.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.18;
+    z-index: -1;
+}
+/* .section1{
+
+} */
+.main__RichLogo{
+    padding-top: 7em;
+    width: 30%;
+}
+.section1__velcome{
+    display: flex;
+    justify-content: center;
+}
+.section1__leftText{
+    padding-bottom: 1em;
+    font-family: 'Cormorant Infant', serif;  
+    line-height: 1.4em;      
+}
+.section1__leftTextp{
+    font-family: 'Cormorant Infant', serif;                                                              
+    color: black;
+    font-size: 1.4em;
+    line-height: 1.4em;      
+}
+.section1photo{
+    width: 30%;
+    border-radius: 1em;
+    margin: 0 2em;
+}
