@@ -2,20 +2,19 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/app"
 import "firebase/compat/auth"
-
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyARdZCVzJZdesLC72DdXjW42bqnQsrSs7M",
-  authDomain: "riche-9310a.firebaseapp.com",
-  projectId: "riche-9310a",
-  storageBucket: "riche-9310a.appspot.com",
-  messagingSenderId: "58925828927",
-  appId: "1:58925828927:web:6062884eec79a56db2e18a"
+  apiKey: "AIzaSyDhc9CAWXPP8bdOkXIKaQhAcBeAHfxz5OA",
+  authDomain: "riche-d7d97.firebaseapp.com",
+  projectId: "riche-d7d97",
+  storageBucket: "riche-d7d97.appspot.com",
+  messagingSenderId: "337846421331",
+  appId: "1:337846421331:web:60e5aadc3dd78083d303a6"
 };
 
 // Initialize Firebase
 const fire = firebase.initializeApp(firebaseConfig);
-export default fire;
+export default fire
