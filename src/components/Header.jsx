@@ -10,13 +10,17 @@ import "./styles/header.css";
 import nameRiche from "../assets/RICHE-name.png";
 import logoWine from "../assets/iconWine.png";
 import logoGin from "../assets/LogoGin.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContextProvider";
 import logoWhiskey from "../assets/iconWhiskey.png";
 import logoLiquor from "../assets/iconLiquor.png";
 
 export default function Header() {
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const {handleLogout, user: {email}} = useAuth();
+  const navigate = useNavigate();
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -25,6 +29,8 @@ export default function Header() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  
 
   return (
     <Box
@@ -99,7 +105,9 @@ export default function Header() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <Link to='/auth'>
+                  <MenuItem onClick={handleClose}>Войти/зарегестрироваться</MenuItem>
+                </Link>
                 <MenuItem onClick={handleClose}>My account</MenuItem>
               </Menu>
             </div>

@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 a{
-  text-decoration: none
+  text-decoration: none;
+  color: black
 }
 @import url('https://fonts.cdnfonts.com/css/modern-no-20');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@1,500&display=swap');

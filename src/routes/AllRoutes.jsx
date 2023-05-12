@@ -6,6 +6,7 @@ import { Liquor } from '@mui/icons-material'
 import Gin from '../components/Gin'
 import { Route, Routes } from 'react-router-dom'
 import NotFoundPage from '../components/NotFoundPage'
+import Auth from '../components/auth/Auth'
 
 const AllRoutes = () => {
     const PAGES_ROUTES = [
@@ -14,7 +15,8 @@ const AllRoutes = () => {
         {link: "/whiskey", element: <Whiskey/>, id: 3},
         {link: "/liquor", element: <Liquor/>, id: 4},
         {link: "/gin", element: <Gin/>, id: 5},
-        {link: "*", element: <NotFoundPage/>, id: 6},
+        {link: "/auth", element: <Auth/>, id: 6},
+        {link: "*", element: <NotFoundPage/>, id: 7},
     ]
   return (
     <>
