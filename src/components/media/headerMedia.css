@@ -1,0 +1,37 @@
+@media screen and (max-width: 1024px) {
+    .headerWine{
+        font-size: 16px;
+    }
+    .headerCategory{
+        flex-wrap: wrap;
+        gap: 4em;
+    }
+}
+@media screen and (max-width: 768px) {
+    .headerCategory{
+        flex-wrap: wrap;
+        gap: 2em;
+    }
+}
+@media screen and (max-width: 676px) {
+    .headerRiche{
+        width: 100px;
+    }
+}
+@media screen and (max-width: 616px) {
+    .headerRiche{
+        width: 100px;
+    }
+    .headerCategory{
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+}
+@media screen and (max-width: 616px) {
+    .headerRiche{
+        width: 100px;
+    }
+    .logoAlco{
+        display: none;
+    }
+}
