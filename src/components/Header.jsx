@@ -12,6 +12,8 @@ import logoWine from "../assets/iconWine.png";
 import logoGin from "../assets/LogoGin.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContextProvider";
+import logoWhiskey from "../assets/iconWhiskey.png";
+import logoLiquor from "../assets/iconLiquor.png";
 
 export default function Header() {
   const [auth, setAuth] = React.useState(true);
@@ -31,7 +33,10 @@ export default function Header() {
   
 
   return (
-    <Box style={{position: "fixed", width: "100vw", zIndex: "1"}} sx={{ flexGrow: 1 }}>
+    <Box
+      style={{ position: "fixed", width: "100vw", zIndex: "1" }}
+      sx={{ flexGrow: 1 }}
+    >
       <AppBar position="static" id="headerContainer">
         <Toolbar>
           <Link to='/'>
@@ -52,6 +57,7 @@ export default function Header() {
               <span
                 className="headerWine"
               >
+                  <img src={logoWhiskey} alt="" />
                 WHISKEY
               </span>
             </Link>
@@ -59,6 +65,7 @@ export default function Header() {
               <span
                 className="headerWine"
               >
+                  <img src={logoLiquor} alt="" />
                 LIQUOR
               </span>
             </Link>
