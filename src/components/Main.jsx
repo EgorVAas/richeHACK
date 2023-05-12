@@ -2,6 +2,10 @@ import React from "react";
 import "./styles/main.css";
 import Rich from "../assets/RICHE-name.png";
 import section1photo from "../assets/section1photo.jpg";
+import Winebg from "../assets/wine-bg.png";
+import Whiskeybg from "../assets/whiskey-bg.png";
+import liquorbg from "../assets/liquor-bg.png";
+import ginbg from "../assets/gin-bg.png";
 
 const Main = () => {
   return (
@@ -39,7 +43,41 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div className="sectionWine"></div>
+      <div className="sectionAlco">
+        <img className="WineLeftPhoto" src={Winebg} alt="" />
+        <div className="Wine__rignt">
+          <h2 className="Wine__rignt_h2">Вина</h2>
+          <h3 className="Wine__rignt_h3">Вино - это не только напиток, но и <br /> культура, искусство и наслаждение.</h3>
+          <p className="Wine__rignt_p">Среди популярных вин можно назвать красные вина, <br /> такие как Мерло, Каберне Совиньон, Шираз <br /> и Пинот Нуар, а также белые вина, такие как Шардоне, <br /> Совиньон Блан, Рислинг и Пино Гриджио.</p>
+        </div>
+      </div>
+      <div className="sectionAlco sectionAlcoReverse">
+        <img className="WineLeftPhoto" src={Whiskeybg} alt="" />
+        <div className="Wine__rignt">
+          <h2 className="Wine__rignt_h2">Виски</h2>
+          <h3 className="Wine__rignt_h3">Виски также является частью культуры <br /> многих стран, в том числе Шотландии, <br /> Ирландии, США и Японии.  
+          </h3>
+          <p className="Wine__rignt_p">Виски - это один из самых известных и популярных спиртных <br /> напитков в мире, произведенный из зерновых культур, <br /> таких как ячмень, рожь и кукуруза. </p>
+        </div>
+      </div>
+      <div className="sectionAlco">
+        <img className="WineLeftPhoto" src={ginbg} alt="" />
+        <div className="Wine__rignt">
+          <h2 className="Wine__rignt_h2">Джин</h2>
+          <h3 className="Wine__rignt_h3">Джин - это прозрачный алкогольный напиток, <br /> который  получается путем перегонки зерновых <br /> спиртов  и добавления ботанических <br /> ингредиентов,  включая можжевельник, <br /> кориандр,  цитрусовые, анис и многие другие.   
+          </h3>
+          <p className="Wine__rignt_p">Этот напиток был изобретен в Нидерландах <br /> в 17 веке, но стал особенно популярен в Англии, где он был <br /> использован в качестве лекарства против малярии</p>
+        </div>
+      </div>
+      <div className="sectionAlco sectionAlcoReverse">
+        <img className="WineLeftPhoto" src={liquorbg} alt="" />
+        <div className="Wine__rignt">
+          <h2 className="Wine__rignt_h2">Ликеры</h2>
+          <h3 className="Wine__rignt_h3">Ликеры - это сладкие алкогольные напитки, <br /> которые производятся путем смешивания <br /> алкоголя с фруктовыми, цветочными, <br /> травяными и другими ароматными ингредиентами.   
+          </h3>
+          <p className="Wine__rignt_p">Ликеры известны своими богатыми вкусами и ароматами, <br /> которые могут быть сладкими, горькими или пряными. </p>
+        </div>
+      </div>
     </div>
   );
 };
