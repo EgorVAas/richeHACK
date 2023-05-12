@@ -9,7 +9,7 @@ import { TextField } from "@mui/material";
 const API = JSON_API_WINE;
 
 export default function MediaCard() {
-  const { getProducts, products } = useProducts();
+  const { getProducts, productsWine } = useProducts();
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = React.useState(searchParams.get("q") || "");
 
@@ -22,10 +22,10 @@ export default function MediaCard() {
   React.useEffect(() => {
     setSearchParams({ q: search });
   }, [search]);
-  // React.useEffect(() => {
-  //   getProducts()
-  //   // setPage(1)
-  // },[searchParams])
+  React.useEffect(() => {
+    getProducts()
+    // setPage(1)
+  },[searchParams])
 
   const [wine, setWine] = React.useState([]);
   const getWine = async () => {
@@ -51,7 +51,7 @@ export default function MediaCard() {
         onChange={(e) => setSearch(e.target.value)}
       />
       <div className="wine_container">
-        {products?.map((item) => (
+        {productsWine?.map((item) => (
           <div className="wine__photo" key={item.id}>
             <img className="img_from_cardjson" src={item.photo} />
             <div className="wine__info">

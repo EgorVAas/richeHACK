@@ -5,14 +5,17 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import AuthContextProvider from "./contexts/AuthContextProvider";
 import ProductsContextProvider from "./contexts/ProductsContextProvider";
+import WhiskeyContextProvider from "./contexts/WhiskeyContextProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <AuthContextProvider>
-      <ProductsContextProvider>
-        <App />
-      </ProductsContextProvider>
-    </AuthContextProvider>
+    <WhiskeyContextProvider>
+      <AuthContextProvider>
+        <ProductsContextProvider>
+          <App />
+        </ProductsContextProvider>
+      </AuthContextProvider>
+    </WhiskeyContextProvider>
   </BrowserRouter>
 );

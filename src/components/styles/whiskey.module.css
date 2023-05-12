@@ -28,6 +28,7 @@
 .img_from_cardjson{
     margin: 1em 1em;
     border-radius: 1em;
+    width: 24%;
 }
 .wine__info{
     padding-left: 2em;

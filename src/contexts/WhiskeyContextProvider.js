@@ -1,22 +1,22 @@
 import axios from "axios";
 import React, { createContext, useContext, useReducer } from "react";
-import { ACTIONS, JSON_API_WINE } from "../helpers/consts";
+import { ACTIONS, JSON_API_WHISKEY } from "../helpers/consts";
 import { useLocation, useNavigate } from "react-router-dom";
 
-export const productContext = createContext();
-export const useProducts = () => {
-  return useContext(productContext);
+export const whiskeyContext = createContext();
+export const useWhiskey = () => {
+  return useContext(whiskeyContext);
 };
 
 const INIT_STATE = {
-  productsWine: [],
+  productsWhiskey: [],
   productDetails: {},
 };
 
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case ACTIONS.GET_PRODUCTS:
-      return { ...state, productsWine: action.payload };
+      return { ...state, productsWhiskey: action.payload };
 
     case ACTIONS.GET_PRODUCT_DETAILS:
       return { ...state, productDetails: action.payload };
@@ -26,27 +26,27 @@ const reducer = (state = INIT_STATE, action) => {
   }
 };
 
-const ProductsContextProvider = ({ children }) => {
+const WhiskeyContextProvider = ({ children }) => {
   const navigate = useNavigate();
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
   const getProducts = async () => {
-    const { data } = await axios(`${JSON_API_WINE}${window.location.search}`);
+    const { data } = await axios(`${JSON_API_WHISKEY}${window.location.search}`);
     dispatch({ type: ACTIONS.GET_PRODUCTS, payload: data });
   };
 
   const addProduct = async (newProduct) => {
-    await axios.post(JSON_API_WINE, newProduct);
-    navigate("/wine");
+    await axios.post(JSON_API_WHISKEY, newProduct);
+    navigate("/whiskey");
   };
 
   const deleteProduct = async (id) => {
-    await axios.delete(`${JSON_API_WINE}/${id}`);
+    await axios.delete(`${JSON_API_WHISKEY}/${id}`);
     getProducts();
   };
 
   const getProductDetails = async (id) => {
-    const { data } = await axios(`${JSON_API_WINE}/${id}`);
+    const { data } = await axios(`${JSON_API_WHISKEY}/${id}`);
     dispatch({
       type: ACTIONS.GET_PRODUCT_DETAILS,
       payload: data,
@@ -54,9 +54,9 @@ const ProductsContextProvider = ({ children }) => {
   };
 
   const saveEditedProduct = async (newProduct) => {
-    await axios.patch(`${JSON_API_WINE}/${newProduct.id}`, newProduct);
+    await axios.patch(`${JSON_API_WHISKEY}/${newProduct.id}`, newProduct);
     getProducts();
-    navigate("/wine");
+    navigate("/whiskey");
   };
 
   // ! ///////////////////// filter ======================
@@ -75,7 +75,7 @@ const ProductsContextProvider = ({ children }) => {
   const values = {
     addProduct,
     getProducts,
-    productsWine: state.productsWine,
+    productsWhiskey: state.productsWhiskey,
     deleteProduct,
     getProductDetails,
     productDetails: state.productDetails,
@@ -83,8 +83,8 @@ const ProductsContextProvider = ({ children }) => {
     fetchByParams,
   };
   return (
-    <productContext.Provider value={values}>{children}</productContext.Provider>
+    <whiskeyContext.Provider value={values}>{children}</whiskeyContext.Provider>
   );
 };
 
-export default ProductsContextProvider;
+export default WhiskeyContextProvider;
