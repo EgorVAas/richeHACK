@@ -11,6 +11,8 @@ import "./styles/header.css";
 import nameRiche from "../assets/RICHE-name.png";
 import logoWine from "../assets/iconWine.png";
 import logoGin from "../assets/LogoGin.png";
+import logoWhiskey from "../assets/iconWhiskey.png";
+import logoLiquor from "../assets/iconLiquor.png";
 
 export default function Header() {
   const [auth, setAuth] = React.useState(true);
@@ -25,33 +27,29 @@ export default function Header() {
   };
 
   return (
-    <Box style={{position: "fixed", width: "100vw", zIndex: "1"}} sx={{ flexGrow: 1 }}>
+    <Box
+      style={{ position: "fixed", width: "100vw", zIndex: "1" }}
+      sx={{ flexGrow: 1 }}
+    >
       <AppBar position="static" id="headerContainer">
         <Toolbar>
-          <div variant="h6" style={{cursor: "pointer"}} sx={{ flexGrow: 1,}}>
+          <div variant="h6" style={{ cursor: "pointer" }} sx={{ flexGrow: 1 }}>
             <img className="headerRiche" src={nameRiche} alt="" />
           </div>
           <Box className="headerCategory">
-            <span
-              className="headerWine"
-            >
-                <img src={logoWine} alt="" />
+            <span className="headerWine">
+              <img src={logoWine} alt="" />
               WINE
             </span>
-            <span
-              className="headerWine"
-            >
+            <span className="headerWine">
+              <img src={logoWhiskey} alt="" />
               WHISKEY
             </span>
-            <span
-              className="headerWine"
-            >
-              LIQUOR
+            <span className="headerWine">
+              <img src={logoLiquor} alt="" /> LIQUOR
             </span>
-            <span
-              className="headerWine"
-            >
-                <img src={logoGin} alt="" />
+            <span className="headerWine">
+              <img src={logoGin} alt="" />
               GIN
             </span>
           </Box>
