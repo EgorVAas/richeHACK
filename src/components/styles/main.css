@@ -1,78 +1,78 @@
-.Main__container{
-    text-align: center;
-    height: 1000px;
+.Main__container {
+  text-align: center;
+  height: 1000px;
 }
-.div{
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    background-image: url(../../assets/bgMain.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.18;
-    z-index: -1;
+.div {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-image: url(../../assets/bgMain.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* opacity: 0.18; */
+  opacity: 0.5;
+  z-index: -1;
 }
 /* .section1{
 
 } */
-.main__RichLogo{
-    padding-top: 7em;
-    width: 30%;
+.main__RichLogo {
+  padding-top: 7em;
+  width: 30%;
 }
-.section1__velcome{
-    display: flex;
-    justify-content: center;
+.section1__velcome {
+  display: flex;
+  justify-content: center;
 }
-.section1__leftText{
-    padding-bottom: 1em;
-    font-family: 'Cormorant Infant', serif;  
-    line-height: 1.4em;      
+.section1__leftText {
+  padding-bottom: 1em;
+  font-family: "Cormorant Infant", serif;
+  line-height: 1.4em;
 }
-.section1__leftTextp{
-    font-family: 'Cormorant Infant', serif;                                                              
-    color: black;
-    font-size: 1.4em;
-    line-height: 1.4em;      
+.section1__leftTextp {
+  font-family: "Cormorant Infant", serif;
+  color: black;
+  font-size: 1.4em;
+  line-height: 1.4em;
 }
-.section1photo{
-    width: 30%;
-    border-radius: 1em;
-    margin: 0 2em;
+.section1photo {
+  width: 30%;
+  border-radius: 1em;
+  margin: 0 2em;
 }
 /* ! /////////////////// FINISH ONE SECTION ////////////////////// */
 
-
-.sectionAlco{
-    margin-top: 7em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4em;
+.sectionAlco {
+  margin-top: 7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
 }
-.WineLeftPhoto{
-    width: 40%;
-    transition: 0.2s;
+.WineLeftPhoto {
+  width: 40%;
+  transition: 0.2s;
 }
-.WineLeftPhoto:hover{
-    transform: scale(1.05);
+.WineLeftPhoto:hover {
+  transform: scale(1.05);
 }
-.Wine__rignt{
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+.Wine__rignt {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
-.Wine__rignt_h2{
-    font-size: 4.6em;
+.Wine__rignt_h2 {
+  font-size: 4.6em;
 }
-.Wine__rignt_h3{
-    font-size: 2.5em;
+.Wine__rignt_h3 {
+  font-size: 2.5em;
 }
-.Wine__rignt_p{
-    font-size: 1.4em;
-    font-weight: 600;
-    padding-top: 1em;
+.Wine__rignt_p {
+  font-size: 1.4em;
+  font-weight: 600;
+  padding-top: 1em;
 }
-.sectionAlcoReverse{
-    display: flex;
-    flex-direction: row-reverse;
+.sectionAlcoReverse {
+  display: flex;
+  flex-direction: row-reverse;
 }

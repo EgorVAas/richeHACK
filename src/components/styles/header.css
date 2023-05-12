@@ -1,27 +1,31 @@
-#headerContainer{
-    background-color: rgb(236, 236, 236);
+#headerContainer {
+  /* background-color: rgb(236, 236, 236); */
+  background-color: rgb(249, 214, 165);
+  /* background-image: url(../../assets/bgFoto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
 
-.headerCategory{
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    gap: 7em;
+.headerCategory {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  gap: 7em;
 }
-.headerWine{
-    font-family: 'Modern No. 20', sans-serif;
-    color: black;
-    font-size: 1.6em;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.2s;
+.headerWine {
+  font-family: "Modern No. 20", sans-serif;
+  color: black;
+  font-size: 1.6em;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
 }
-.headerWine:hover{
-    transform: scale(1.1);
-    border-radius: 10%;
+.headerWine:hover {
+  transform: scale(1.1);
+  border-radius: 10%;
 }
-.headerRiche{
-    width: 160px;
-    padding-top: 7px;
+.headerRiche {
+  width: 160px;
+  padding-top: 7px;
 }
