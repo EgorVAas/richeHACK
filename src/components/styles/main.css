@@ -47,12 +47,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4em;
+  gap: 0em;
 }
 .WineLeftPhoto {
   width: 40%;
   transition: 0.2s;
+  cursor: pointer;
 }
+
 .WineLeftPhoto:hover {
   transform: scale(1.05);
 }

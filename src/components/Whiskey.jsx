@@ -1,6 +1,7 @@
 import * as React from "react";
 import axios from "axios";
 import styles from  "./styles/whiskey.module.css";
+import "./styles/wine.css";
 import { useSearchParams } from "react-router-dom";
 import { JSON_API_WHISKEY} from "../helpers/consts";
 import { TextField } from "@mui/material";
@@ -53,7 +54,7 @@ export default function Whiskey() {
       <div className="wine_container">
         {productsWhiskey?.map((item) => (
           <div className="wine__photo" key={item.id}>
-            <img className={styles.img_from_cardjson} src={item.photo} />
+            <img className={styles.img_from_cardjson } src={item.photo} />
             <div className="wine__info">
               <h6 className="wine__name">Название: {item.name}</h6>
               <h6 className="wine__title">Год: {item.year}</h6>
