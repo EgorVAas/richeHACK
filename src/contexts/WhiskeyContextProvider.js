@@ -72,6 +72,9 @@ const WhiskeyContextProvider = ({ children }) => {
     const url = `${location.pathname}?${search.toString()}`;
     navigate(url);
   };
+
+
+  
   const values = {
     addProduct,
     getProducts,

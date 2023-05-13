@@ -4,13 +4,13 @@ import styles from  "./styles/whiskey.module.css";
 import "./styles/wine.css";
 import { useSearchParams } from "react-router-dom";
 import { JSON_API_WHISKEY} from "../helpers/consts";
-import { TextField } from "@mui/material";
 import { useWhiskey } from "../contexts/WhiskeyContextProvider";
+import { TextField,  FormControlLabel,  Radio, RadioGroup } from "@mui/material";
 
 const API = JSON_API_WHISKEY;
 
 export default function Whiskey() {
-  const { getProducts, productsWhiskey } = useWhiskey();
+  const { getProducts, productsWhiskey, fetchByParams } = useWhiskey();
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = React.useState(searchParams.get("q") || "");
 
@@ -42,6 +42,40 @@ export default function Whiskey() {
   React.useEffect(() => {
     getWine();
   }, []);
+
+  // *Filter
+  const DesignFilter = (
+    <div className="wine__filterDesignContainer">
+          <h2>Найти по категории!</h2>
+      <div className="wine__filterDesign">
+          <RadioGroup
+            aria-labelledby="demo-radio-buttons-group-label"
+            sx={{display: "flex", flexDirection: "row"}}
+            defaultValue="all"
+            name="radio-buttons-group"
+            onChange={(e) => fetchByParams('type', e.target.value)}
+          >
+            <FormControlLabel
+              value="all"
+              control={<Radio />}
+              label="Все"
+            />
+            <FormControlLabel
+              value="Односолодовый"
+              control={<Radio />}
+              label="Односолодовый"
+            />
+            <FormControlLabel
+              value="Бурбон"
+              control={<Radio />}
+              label="Бурбон"
+            />
+            <FormControlLabel value="Купажированный" control={<Radio />} label="Купажированный" />
+          </RadioGroup>
+      </div>
+    </div>
+  )
+  // *Filter
   return (
     <div className="wine_card-box" style={{ paddingTop: "6em" }}>
       <TextField
@@ -51,6 +85,7 @@ export default function Whiskey() {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
+      {DesignFilter}
       <div className="wine_container">
         {productsWhiskey?.map((item) => (
           <div className="wine__photo" key={item.id}>
