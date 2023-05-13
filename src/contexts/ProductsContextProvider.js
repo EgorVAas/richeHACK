@@ -59,6 +59,21 @@ const ProductsContextProvider = ({ children }) => {
     navigate("/wine");
   };
 
+  // *FIlter
+  const location = useLocation();
+  const fetchByParams = async (query, value) => {
+    const search = new URLSearchParams(window.location.search)
+    if(value === "all"){
+      search.delete(query)
+    } else{
+      search.set(query, value)
+    }
+
+    const url = `${location.pathname}?${search.toString()}`;
+    navigate(url)
+  }
+  // *FIlter
+
   const values = {
     addProduct,
     getProducts,
@@ -67,6 +82,7 @@ const ProductsContextProvider = ({ children }) => {
     getProductDetails,
     productDetails: state.productDetails,
     saveEditedProduct,
+    fetchByParams
   };
   return (
     <productContext.Provider value={values}>{children}</productContext.Provider>

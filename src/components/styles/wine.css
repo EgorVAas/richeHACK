@@ -46,3 +46,15 @@
 .wine__date{
     font-size: 1em;
 }
+.wine__filterDesign{
+
+    display: flex;
+}
+.wine__filterDesignContainer{
+    background-image: url(../../assets/wine__cards.jpg);
+    background-size: cover;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
