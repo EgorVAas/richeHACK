@@ -14,7 +14,7 @@
     },
     {
       "name": "L'Ermita Velles Vinyes, Alvaro Palacios",
-      "photo": "https://images.vivino.com/thumbs/aSQz1n49SM6JCS1F9aDOHQ_pb_600x600.png",
+      "photo": "https://winemore.ru/upload/iblock/82d/2k2bqp12g2vwf4xdtiw9hsoet4lpvnit/03daa95db328b10c0546dcbb61e92ea0.png",
       "year": "2011",
       "country": "Испания, Каталония",
       "type": "Красное, сухое",
@@ -147,8 +147,8 @@
   ],
   "whiskey": [
     {
-      "name": "Односолодовый",
-      "photo": "https://img.thewhiskyexchange.com/900/bunob.1980v1.jpg",
+      "name": "Bunnahabhain aged 25 years",
+      "photo": "https://winemore.ru/upload/iblock/35b/i8s0sehascoszj3kom0rsykqsufxniwf/viski-bunnahabhain-1980-limited-edition_1.png",
       "year": "1980",
       "country": "Шотландия, Айла",
       "type": "Односолодовый",
@@ -464,16 +464,6 @@
       "volume": "0.7 л",
       "price": "5 390 ₽",
       "id": 7
-    }
-  ],
-  "admin": [
-    {
-      "picture": "https://stats.mihf.ru/contents/players/pic_124318_569_254099903_%D0%91%D1%83%D1%81%D1%8B%D0%B3%D0%B8%D0%BD_%D0%95%D0%B3%D0%BE%D1%80.jpg",
-      "name": "wwwwwwwwwwwww",
-      "country": "asdas",
-      "volume": "asdasd",
-      "price": 123123,
-      "id": 1
     }
   ]
 }
