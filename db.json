@@ -147,7 +147,7 @@
   ],
   "whiskey": [
     {
-      "name": "https://winemore.ru/upload/iblock/35b/i8s0sehascoszj3kom0rsykqsufxniwf/viski-bunnahabhain-1980-limited-edition_1.png",
+      "name": "Односолодовый",
       "photo": "https://img.thewhiskyexchange.com/900/bunob.1980v1.jpg",
       "year": "1980",
       "country": "Шотландия, Айла",
@@ -207,7 +207,7 @@
       "id": 5
     },
     {
-      "name": "Kavalan Solist Vinho Barrique Cask Single Cask Strength",
+      "name": "Kavalan Solist Vinho Barrique",
       "photo": "https://luding.ru/upload/resize_cache/iblock/382/800_900_0/cd7rh1naldea6wn4bjy3rgufqlrz1zr8.png",
       "year": "2020",
       "country": "Тайвань, И-Лан",
@@ -448,7 +448,7 @@
       "id": 5
     },
     {
-      "name": "Drumshanbo With Sardinian Citrus Gunpowder Irish Gin",
+      "name": "Drumshanbo With Sardinian Gin",
       "photo": "https://cdn11.bigcommerce.com/s-oyi93ews/products/16598/images/12379/IMG_5729__31006.1660685536.900.900.png?c=2",
       "country": "Ирландия",
       "strong": "43%",
@@ -457,13 +457,23 @@
       "id": 6
     },
     {
-      "name": "Drumshanbo With California Orange Citrus Gunpowder Irish Gin",
+      "name": "Drumshanbo With California Gin",
       "photo": "https://www.palmbay.com/sites/default/files/product/bottle/image/2023-02/DGIG_California-Orange-Citrus-PNG_web.png",
       "country": "Ирландия",
       "strong": "43%",
       "volume": "0.7 л",
       "price": "5 390 ₽",
       "id": 7
+    }
+  ],
+  "admin": [
+    {
+      "picture": "https://stats.mihf.ru/contents/players/pic_124318_569_254099903_%D0%91%D1%83%D1%81%D1%8B%D0%B3%D0%B8%D0%BD_%D0%95%D0%B3%D0%BE%D1%80.jpg",
+      "name": "wwwwwwwwwwwww",
+      "country": "asdas",
+      "volume": "asdasd",
+      "price": 123123,
+      "id": 1
     }
   ]
 }

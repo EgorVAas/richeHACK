@@ -1,9 +1,10 @@
 import React from 'react'
 import Header from './components/Header'
-import Main from './components/Main'
 import AllRoutes from './routes/AllRoutes'
+import { useAuth } from './contexts/AuthContextProvider'
 
 const App = () => {
+  const {user} = useAuth()
   return (
     <div>
       <Header/>

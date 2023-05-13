@@ -4,15 +4,13 @@ const NotFoundPage = () => {
   return (
     <div
       style={{
-        backgroundColor: "#d63638",
         height: "100vh"
       }}
     >
       <h3
         style={{
           paddingTop: "6em",
-          textAlign: "center",
-          fontSize: "3em",
+          fontSize: "1em",
           fontFamily: "Cormorant Infant, serif",
         }}
       >

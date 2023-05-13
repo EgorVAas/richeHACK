@@ -15,10 +15,15 @@ import { Link, useNavigate} from "react-router-dom";
 import { useAuth } from "../contexts/AuthContextProvider";
 import logoWhiskey from "../assets/iconWhiskey.png";
 import logoLiquor from "../assets/iconLiquor.png";
+import { MenuList } from "@mui/material";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import Badge from "@mui/material/Badge";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import PersonRemoveIcon from "@mui/icons-material/PersonRemove";
+
 
 export default function Header() {
   const [auth, setAuth] = React.useState(true);
-  const [anchorEl, setAnchorEl] = React.useState(null);
 
   const {
     handleLogout,
@@ -33,6 +38,140 @@ export default function Header() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  // ! menu admin open
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+
+  const [count, setCount] = React.useState()
+  // const {addProductToCart} = useCart()
+
+  // React.useEffect(() => {
+  //   setCount(getCountProductsInCart())
+  // },[addProductToCart])
+
+  const isMenuOpen = Boolean(anchorEl);
+  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+  let arr = [
+    { title: "Woman", key: 1, link: "wom" },
+    { title: "Men", key: 2, link: "men" },
+    { title: "Kids", key: 3, link: "kids" },
+    { title: "Collection", key: 4, link: "collection" },
+    { title: "Sports", key: 5, link: "sports" },
+    { title: "Sale", key: 6, link: "sale" },
+  ];
+
+  const handleProfileMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMobileMenuClose = () => {
+    setMobileMoreAnchorEl(null);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+    handleMobileMenuClose();
+  };
+
+  const handleMobileMenuOpen = (event) => {
+    setMobileMoreAnchorEl(event.currentTarget);
+  };
+
+  const menuId = "primary-search-account-menu";
+  const renderMenu = (
+    <Menu
+      anchorEl={anchorEl}
+      anchorOrigin={{
+        vertical: "top",
+        horizontal: "right",
+      }}
+      id={menuId}
+      keepMounted
+      transformOrigin={{
+        vertical: "top",
+        horizontal: "right",
+      }}
+      open={isMenuOpen}
+      onClose={handleMenuClose}
+    >
+      {email ? (
+        <MenuList>
+          <MenuItem>hello, {email}!</MenuItem>
+          <MenuItem
+            onClick={() => {
+              handleLogout();
+              handleMenuClose();
+            }}
+          >
+            Logout
+          </MenuItem>
+          <Link to='/add-alco'>
+            <MenuItem>Добавить алкоголь!</MenuItem>
+          </Link>
+          <Link to='/admin-alco'>
+            <MenuItem>Мои напитки!</MenuItem>
+          </Link>
+        </MenuList>
+      ) : (
+        <MenuItem onClick={() => navigate("/auth")}>Login</MenuItem>
+      )}
+    </Menu>
+  )
+
+  const mobileMenuId = "primary-search-account-menu-mobile";
+  const renderMobileMenu = (
+    <Menu
+      anchorEl={mobileMoreAnchorEl}
+      anchorOrigin={{
+        vertical: "top",
+        horizontal: "right",
+      }}
+      id={mobileMenuId}
+      keepMounted
+      transformOrigin={{
+        vertical: "top",
+        horizontal: "right",
+      }}
+      open={isMobileMenuOpen}
+      onClose={handleMobileMenuClose}
+    >
+      <MenuItem>
+        <ShoppingCartIcon size="large" color="black">
+          <Badge>
+            <ShoppingCartIcon />
+          </Badge>
+        </ShoppingCartIcon>
+
+        <p>Messages</p>
+      </MenuItem>
+      <MenuItem>
+        <FavoriteBorderIcon
+          size="large"
+          aria-label="show 17 new notifications"
+          color="inherit"
+        >
+          <img src="" alt="" />
+          <Badge badgeContent={17} color="error">
+            <FavoriteBorderIcon />
+          </Badge>
+        </FavoriteBorderIcon>
+        <p>Notifications</p>
+      </MenuItem>
+      <MenuItem onClick={handleProfileMenuOpen}>
+        <PersonRemoveIcon
+          size="large"
+          aria-label="account of current user"
+          aria-controls="primary-search-account-menu"
+          aria-haspopup="true"
+          color="inherit"
+        >
+          <PersonRemoveIcon />
+        </PersonRemoveIcon>
+        <p>Profile</p>
+      </MenuItem>
+    </Menu>
+  );
 
   return (
     <Box
@@ -88,32 +227,12 @@ export default function Header() {
               >
                 <AccountCircle />
               </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorEl}
-                anchorOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
-              >
-                <Link to="/auth">
-                  <MenuItem onClick={handleClose}>
-                    Войти/зарегестрироваться
-                  </MenuItem>
-                </Link>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-              </Menu>
             </div>
           )}
         </Toolbar>
       </AppBar>
+      {renderMobileMenu}
+      {renderMenu}
     </Box>
   );
 }

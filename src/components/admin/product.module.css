@@ -1,18 +1,19 @@
 
-.wine_card-box{
+.wine_card_box{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-image: url(../../assets/bg-wine.jpg);
     min-height: 100vh;
+    width: 100vw;
 }
 
 .wine_container{
     width: 70%;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    /* gap: 1em; */
 }
 .wine__photo{
     border: 2px solid black;
@@ -28,7 +29,7 @@
 .img_from_cardjson{
     margin: 1em 1em;
     border-radius: 1em;
-    width: 10%;
+    width: 24%;
     height: 320px;
 }
 .wine__info{
@@ -45,4 +46,18 @@
 }
 .wine__date{
     font-size: 1em;
+}
+.product__btn{
+    width: 100px;
+    font-size: 1em;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: 600;
+    transition: 0.2s;
+}
+.product__btn:hover{
+    background-color: rgba(0, 0, 0, 0.384);
+    border: 0.5px solid black;
+    border-radius: 1em;
+    transform: scale(0.9);
 }

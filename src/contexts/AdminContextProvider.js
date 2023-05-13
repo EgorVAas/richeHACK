@@ -1,22 +1,22 @@
 import axios from "axios";
 import React, { createContext, useContext, useReducer } from "react";
-import { ACTIONS, JSON_API_WINE } from "../helpers/consts";
+import { ACTIONS, JSON_API_ADMIN } from "../helpers/consts";
 import { useLocation, useNavigate } from "react-router-dom";
 
-export const productContext = createContext();
-export const useProducts = () => {
-  return useContext(productContext);
+export const adminContext = createContext();
+export const useAdmin = () => {
+  return useContext(adminContext);
 };
 
 const INIT_STATE = {
-  productsWine: [],
+  productsAdmin: [],
   productDetails: {},
 };
 
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case ACTIONS.GET_PRODUCTS:
-      return { ...state, productsWine: action.payload };
+      return { ...state, productsAdmin: action.payload };
 
     case ACTIONS.GET_PRODUCT_DETAILS:
       return { ...state, productDetails: action.payload };
@@ -26,27 +26,27 @@ const reducer = (state = INIT_STATE, action) => {
   }
 };
 
-const ProductsContextProvider = ({ children }) => {
+const AdminContextProvider = ({ children }) => {
   const navigate = useNavigate();
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
   const getProducts = async () => {
-    const { data } = await axios(`${JSON_API_WINE}${window.location.search}`);
+    const { data } = await axios(`${JSON_API_ADMIN}${window.location.search}`);
     dispatch({ type: ACTIONS.GET_PRODUCTS, payload: data });
   };
 
   const addProduct = async (newProduct) => {
-    await axios.post(JSON_API_WINE, newProduct);
-    navigate("/wine");
+    await axios.post(JSON_API_ADMIN, newProduct);
+    navigate("/admin-alco");
   };
 
   const deleteProduct = async (id) => {
-    await axios.delete(`${JSON_API_WINE}/${id}`);
+    await axios.delete(`${JSON_API_ADMIN}/${id}`);
     getProducts();
   };
 
   const getProductDetails = async (id) => {
-    const { data } = await axios(`${JSON_API_WINE}/${id}`);
+    const { data } = await axios(`${JSON_API_ADMIN}/${id}`);
     dispatch({
       type: ACTIONS.GET_PRODUCT_DETAILS,
       payload: data,
@@ -54,23 +54,23 @@ const ProductsContextProvider = ({ children }) => {
   };
 
   const saveEditedProduct = async (newProduct) => {
-    await axios.patch(`${JSON_API_WINE}/${newProduct.id}`, newProduct);
+    await axios.patch(`${JSON_API_ADMIN}/${newProduct.id}`, newProduct);
     getProducts();
-    navigate("/wine");
+    navigate("/admin-alco");
   };
 
   const values = {
     addProduct,
     getProducts,
-    productsWine: state.productsWine,
+    productsAdmin: state.productsAdmin,
     deleteProduct,
     getProductDetails,
     productDetails: state.productDetails,
     saveEditedProduct,
   };
   return (
-    <productContext.Provider value={values}>{children}</productContext.Provider>
+    <adminContext.Provider value={values}>{children}</adminContext.Provider>
   );
 };
 
-export default ProductsContextProvider;
+export default AdminContextProvider;

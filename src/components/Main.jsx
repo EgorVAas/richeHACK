@@ -6,6 +6,7 @@ import Winebg from "../assets/wine-bg.png";
 import Whiskeybg from "../assets/whiskey-bg.png";
 import liquorbg from "../assets/liquor-bg.png";
 import ginbg from "../assets/gin-bg.png";
+import { Link } from "react-router-dom";
 
 const Main = () => {
   return (
@@ -44,7 +45,7 @@ const Main = () => {
         </div>
       </div>
       <div className="sectionAlco">
-        <img className="WineLeftPhoto" src={Winebg} alt="" />
+          <img className="WineLeftPhoto" src={Winebg} alt="" />
         <div className="Wine__rignt">
           <h2 className="Wine__rignt_h2">ВИНО</h2>
           <h3 className="Wine__rignt_h3">
@@ -60,7 +61,7 @@ const Main = () => {
         </div>
       </div>
       <div className="sectionAlco sectionAlcoReverse">
-        <img className="WineLeftPhoto" src={Whiskeybg} alt="" />
+          <img className="WineLeftPhoto" src={Whiskeybg} alt="" />
         <div className="Wine__rignt">
           <h2 className="Wine__rignt_h2">ВИСКИ</h2>
           <h3 className="Wine__rignt_h3">
@@ -75,7 +76,7 @@ const Main = () => {
         </div>
       </div>
       <div className="sectionAlco">
-        <img className="WineLeftPhoto" src={ginbg} alt="" />
+          <img className="WineLeftPhoto" src={ginbg} alt="" />
         <div className="Wine__rignt">
           <h2 className="Wine__rignt_h2">ДЖИН</h2>
           <h3 className="Wine__rignt_h3">
@@ -92,7 +93,7 @@ const Main = () => {
         </div>
       </div>
       <div className="sectionAlco sectionAlcoReverse">
-        <img className="WineLeftPhoto" src={liquorbg} alt="" />
+          <img className="WineLeftPhoto" src={liquorbg} alt="" />
         <div className="Wine__rignt">
           <h2 className="Wine__rignt_h2">ЛИКЕР</h2>
           <h3 className="Wine__rignt_h3">
