@@ -52,15 +52,6 @@ export default function Header() {
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-  let arr = [
-    { title: "Woman", key: 1, link: "wom" },
-    { title: "Men", key: 2, link: "men" },
-    { title: "Kids", key: 3, link: "kids" },
-    { title: "Collection", key: 4, link: "collection" },
-    { title: "Sports", key: 5, link: "sports" },
-    { title: "Sale", key: 6, link: "sale" },
-  ];
-
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
