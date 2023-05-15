@@ -1,48 +1,66 @@
-
-.wine_card-box{
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url(../../assets/bg-wine.jpg);
-    min-height: 100vh;
+.wiskey_card_box {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.wine_container{
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+.wiskey_div {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-image: url(../../assets//bgWhiskey.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
 }
-.wine__photo{
-    border: 2px solid black;
-    border-radius: 1em;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 3em;
-    /* background-color: rgba(199, 145, 95, 0.623); */
-    background-image: url(../../assets/wine__cards.jpg);
-    background-size: contain;
+
+.wiskey_container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
-.img_from_cardjson{
-    margin: 1em 1em;
-    border-radius: 1em;
-    width: 16%;
-    height: 320px;
+.wiskey__photo {
+  border: 2px solid black;
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3em;
+  /* background-color: rgba(199, 145, 95, 0.623); */
+  background-image: url(../../assets/wiskey-cards.jpg);
+  background-size: cover;
+  background-position-y: center;
 }
-.wine__info{
-    padding-left: 2em;
-    display: flex;
-    flex-direction: column;
-    gap: 1.4em;
+.img_from_cardjson {
+  margin: 1em 1em;
+  border-radius: 1em;
+  width: 16%;
+  height: 320px;
 }
-.wine__name{
-    font-size: 2em;
+.wiskey__info {
+  padding-left: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4em;
 }
-.wine__title{
-    font-size: 1.5em;
+.wine__name {
+  font-size: 2em;
 }
-.wine__date{
-    font-size: 1em;
+.wine__title {
+  font-size: 1.5em;
+}
+.wine__date {
+  font-size: 1em;
+}
+
+.wiskey__filterDesignContainer {
+  background-image: url(../../assets/BgFilterWisk.jpg);
+  background-size: cover;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 1em;
+  margin-bottom: 1em;
 }

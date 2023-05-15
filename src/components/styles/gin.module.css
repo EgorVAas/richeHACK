@@ -1,10 +1,19 @@
-.wine_card-box {
+.gin_card_box {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(../../assets/bg-wine.jpg);
   min-height: 100vh;
+}
+
+.gin_div {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-image: url(../../assets//bgGin.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
 }
 
 .wine_container {
@@ -13,7 +22,7 @@
   flex-direction: column;
   gap: 1em;
 }
-.wine__photo {
+.gin__photo {
   border: 2px solid black;
   border-radius: 1em;
   display: flex;
@@ -21,8 +30,8 @@
   flex-wrap: wrap;
   gap: 3em;
   /* background-color: rgba(199, 145, 95, 0.623); */
-  background-image: url(../../assets/wine__cards.jpg);
-  background-size: contain;
+  background-image: url(../../assets/gin__cards.jpg);
+  background-size: cover;
 }
 .img_from_cardjson {
   margin: 1em 1em;
