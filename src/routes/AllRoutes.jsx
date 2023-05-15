@@ -27,7 +27,6 @@ const AllRoutes = () => {
     { link: "/admin-alco", element: <AdminAlco />, id: 8 },
     { link: "/cart", element: <CartPage />, id: 10 },
   ];
-
   const ADMIN_PAGES = [
     { link: "/add-alco", element: <AddAlco />, id: 8 },
     { link: "/edit/:id", element: <EditAlco />, id: 9 },
