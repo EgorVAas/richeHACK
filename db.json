@@ -487,10 +487,10 @@
   ],
   "admin": [
     {
-      "picture": "qwe",
-      "name": "qw",
-      "country": "eqwe",
-      "volume": "qw",
+      "picture": "https://cdn2.veseloeradio.ru/vardata/modules/news/files/1/9829/news_file_9829_63c7dda52ab03.jpg",
+      "name": "egor",
+      "country": "asdas",
+      "volume": "asdasdd",
       "price": null,
       "id": 1
     }

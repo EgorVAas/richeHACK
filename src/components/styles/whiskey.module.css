@@ -45,6 +45,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.4em;
+  display: none;
 }
 .wine__name {
   font-size: 2em;

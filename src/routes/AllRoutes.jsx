@@ -23,12 +23,12 @@ const AllRoutes = () => {
         {link: "/gin", element: <Gin/>, id: 5},
         {link: "/auth", element: <Auth/>, id: 6},
         {link: "*", element: <NotFoundPage/>, id: 7},
-        {link: "/admin-alco", element: <AdminAlco/>, id: 8},
     ]
 
     const ADMIN_PAGES = [
-        {link: "/add-alco", element: <AddAlco/>, id: 8},
-        {link: "/edit/:id", element: <EditAlco/>, id: 9},
+        {link: "/admin-alco", element: <AdminAlco/>, id: 8},
+        {link: "/add-alco", element: <AddAlco/>, id: 9},
+        {link: "/edit/:id", element: <EditAlco/>, id: 10},
     ]
   return (
     <>
@@ -37,7 +37,7 @@ const AllRoutes = () => {
                 <Route path={elem.link} key={elem.id} element={elem.element}/>
             ))}
 
-            {user ? ADMIN_PAGES.map((elem) => (
+            {user? ADMIN_PAGES.map((elem) => (
                 <Route path={elem.link} key={elem.id} element={
                     user.email === ADMIN ? (elem.element): (<Navigate replace to='*'/>)
                 }/>
