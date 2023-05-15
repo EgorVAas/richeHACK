@@ -87,7 +87,7 @@ export default function Whiskey() {
           {productsWhiskey?.map((item) => (
             <div className={styles.wiskey__photo} key={item.id}>
               <img className={styles.img_from_cardjson} src={item.photo} />
-              <div className="wiskey__info">
+              <div className={styles.wiskey__info}>
                 <h6 className="wine__name">Название: {item.name}</h6>
                 <h6 className="wine__title">Год: {item.year}</h6>
                 <h6 className="wine__date">Страна: {item.country}</h6>
