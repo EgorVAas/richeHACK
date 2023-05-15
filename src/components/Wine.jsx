@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import { useCart } from "../contexts/CartContextProvider";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import "./media/headerMedia.css";
 
 const API = JSON_API_WINE;
 
@@ -53,6 +54,13 @@ export default function MediaCard() {
   // *Filter
   const DesignFilter = (
     <div className="wine__filterDesignContainer">
+      <TextField
+        type="text"
+        sx={{ width: "300px", height: "70px" }}
+        placeholder="Поиск Вина..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
       <h2>Найти по категории!</h2>
       <div className="wine__filterDesign">
         <RadioGroup
@@ -89,40 +97,35 @@ export default function MediaCard() {
   );
   // *Filter
   return (
-    <div className="wine_card-box" style={{ paddingTop: "6em" }}>
-      <TextField
-        type="text"
-        sx={{ width: "300px", height: "70px" }}
-        placeholder="Поиск Вина"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      {DesignFilter}
-      <div className="wine_container">
-        {productsWine?.map((item) => (
-          <div className="wine__photo" key={item.id}>
-            <img className="img_from_cardjson" src={item.photo} />
-            <div className="wine__info">
-              <h6 className="wine__name">Название: {item.name}</h6>
-              <h6 className="wine__title">Год: {item.year}</h6>
-              <h6 className="wine__date">Страна: {item.country}</h6>
-              <h6 className="wine__date">Тип: {item.type}</h6>
-              <h6 className="wine__date">Сорт: {item.grapes}</h6>
-              <h6 className="wine__date">Крепость: {item.strong}</h6>
-              <h6 className="wine__date">Обьем: {item.volume}</h6>
-              <h6 className="wine__date">Цена: {item.price}</h6>
-              <IconButton
-                sx={{ width: "3vw" }}
-                onClick={() => addProductToCart(item)}
-              >
-                <AddShoppingCartIcon
-                  color={checkProductInCart(item.id) ? "primary" : ""}
-                />
-              </IconButton>
+    <>
+      <div className="wine_card-box" style={{ paddingTop: "6em" }}>
+        {DesignFilter}
+        <div className="wine_container">
+          {productsWine?.map((item) => (
+            <div className="wine__photo" key={item.id}>
+              <img className="img_from_cardjson" src={item.photo} />
+              <div className="wine__info">
+                <h6 className="wine__name">Название: {item.name}</h6>
+                <h6 className="wine__title">Год: {item.year}</h6>
+                <h6 className="wine__date">Страна: {item.country}</h6>
+                <h6 className="wine__date">Тип: {item.type}</h6>
+                <h6 className="wine__date">Сорт: {item.grapes}</h6>
+                <h6 className="wine__date">Крепость: {item.strong}</h6>
+                <h6 className="wine__date">Обьем: {item.volume}</h6>
+                <h6 className="wine__date">Цена: {item.price}</h6>
+                <IconButton
+                  sx={{ width: "3vw" }}
+                  onClick={() => addProductToCart(item)}
+                >
+                  <AddShoppingCartIcon
+                    color={checkProductInCart(item.id) ? "primary" : ""}
+                  />
+                </IconButton>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

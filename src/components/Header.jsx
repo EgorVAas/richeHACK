@@ -88,14 +88,14 @@ export default function Header() {
     >
       {email ? (
         <MenuList>
-          <MenuItem>hello, {email}!</MenuItem>
+          <MenuItem>{email}</MenuItem>
           <MenuItem
             onClick={() => {
               handleLogout();
               handleMenuClose();
             }}
           >
-            Logout
+            Выйти
           </MenuItem>
           <Link to='/add-alco'>
             <MenuItem>Добавить алкоголь!</MenuItem>
@@ -103,9 +103,17 @@ export default function Header() {
           <Link to='/admin-alco'>
             <MenuItem>Мои напитки!</MenuItem>
           </Link>
+          <Link to="cart">
+            <MenuItem>Корзина</MenuItem>
+          </Link>
         </MenuList>
       ) : (
-        <MenuItem onClick={() => navigate("/auth")}>Login</MenuItem>
+        <MenuList>
+          <MenuItem onClick={() => navigate("/auth")}>Войти</MenuItem>
+          <Link to="cart">
+            <MenuItem>Корзина</MenuItem>
+          </Link>
+        </MenuList>
       )}
     </Menu>
   )
@@ -142,7 +150,6 @@ export default function Header() {
           aria-label="show 17 new notifications"
           color="inherit"
         >
-          <img src="" alt="" />
           <Badge badgeContent={17} color="error">
             <FavoriteBorderIcon />
           </Badge>
