@@ -1,19 +1,21 @@
-import React from 'react'
-import Main from '../components/Main'
-import Wine from '../components/Wine'
-import Whiskey from '../components/Whiskey'
-import Gin from '../components/Gin'
-import { Navigate, Route, Routes } from 'react-router-dom'
-import NotFoundPage from '../components/NotFoundPage'
-import Auth from '../components/auth/Auth'
-import Liquor from '../components/Liquor'
-import AddAlco from '../components/admin/AddAlco'
-import EditAlco from '../components/admin/EditAlco'
-import { useAuth } from '../contexts/AuthContextProvider'
-import { ADMIN } from '../helpers/consts'
-import AdminAlco from '../components/admin/AdminAlco'
+import React from "react";
+import Main from "../components/Main";
+import Wine from "../components/Wine";
+import Whiskey from "../components/Whiskey";
+import Gin from "../components/Gin";
+import { Navigate, Route, Routes } from "react-router-dom";
+import NotFoundPage from "../components/NotFoundPage";
+import Auth from "../components/auth/Auth";
+import Liquor from "../components/Liquor";
+import AddAlco from "../components/admin/AddAlco";
+import EditAlco from "../components/admin/EditAlco";
+import { useAuth } from "../contexts/AuthContextProvider";
+import { ADMIN } from "../helpers/consts";
+import AdminAlco from "../components/admin/AdminAlco";
+import CartPage from "../components/CartPage";
 
 const AllRoutes = () => {
+
     const {user} = useAuth()
     const PAGES_ROUTES = [
         {link: "/", element: <Main/>, id: 1},
@@ -32,10 +34,10 @@ const AllRoutes = () => {
     ]
   return (
     <>
-        <Routes>
-            {PAGES_ROUTES.map((elem) => (
-                <Route path={elem.link} key={elem.id} element={elem.element}/>
-            ))}
+      <Routes>
+        {PAGES_ROUTES.map((elem) => (
+          <Route path={elem.link} key={elem.id} element={elem.element} />
+        ))}
 
             {user? ADMIN_PAGES.map((elem) => (
                 <Route path={elem.link} key={elem.id} element={
@@ -44,7 +46,7 @@ const AllRoutes = () => {
             )): null}
         </Routes>
     </>
-  )
-}
+  );
+};
 
-export default AllRoutes
+export default AllRoutes;
