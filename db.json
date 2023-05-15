@@ -484,5 +484,15 @@
       "price": "5 390 ₽",
       "id": 7
     }
+  ],
+  "admin": [
+    {
+      "picture": "qwe",
+      "name": "qw",
+      "country": "eqwe",
+      "volume": "qw",
+      "price": null,
+      "id": 1
+    }
   ]
 }
