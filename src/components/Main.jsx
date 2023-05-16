@@ -6,7 +6,6 @@ import Winebg from "../assets/wine-bg.png";
 import Whiskeybg from "../assets/whiskey-bg.png";
 import liquorbg from "../assets/liquor-bg.png";
 import ginbg from "../assets/gin-bg.png";
-import { Link } from "react-router-dom";
 
 const Main = () => {
   return (

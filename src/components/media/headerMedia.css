@@ -35,3 +35,26 @@
         display: none;
     }
 }
+@media screen and (max-width: 914px) {
+    .wine__photo{
+        justify-content: center;
+    }
+    #wiskey__photo{
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 462px) {
+    #wiskey__photo img {
+        width: 90%;
+    }
+    #wiskey__photo img {
+        width: 90%;
+    }
+    #liq__photo img{
+        width: 90%;
+        height: 350px;
+    }
+    #gin__photo img {
+        width: 90%;
+    }
+}

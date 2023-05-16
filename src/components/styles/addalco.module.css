@@ -9,5 +9,7 @@
 }
 
 .addAclo_box {
-  background-color: rgb(228, 199, 147);
+  /* background-color: rgb(228, 199, 147); */
+  background-image: url(../../assets//bg-buyCart.png);
+  background-size: cover;
 }

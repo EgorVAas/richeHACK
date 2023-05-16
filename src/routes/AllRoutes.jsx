@@ -12,7 +12,7 @@ import EditAlco from "../components/admin/EditAlco";
 import { useAuth } from "../contexts/AuthContextProvider";
 import { ADMIN } from "../helpers/consts";
 import AdminAlco from "../components/admin/AdminAlco";
-import CartPage from "../components/CartPage";
+import Cart from "../components/cart/Cart";
 
 const AllRoutes = () => {
   const { user } = useAuth();

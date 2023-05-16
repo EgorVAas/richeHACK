@@ -1,28 +1,21 @@
 import * as React from "react";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
 import { useCart } from "../../contexts/CartContextProvider";
-import { Button } from "@mui/material";
+import { Box, Typography, TextField } from "@mui/material";
+import styles from "../styles/addalco.module.css";
+import { useNavigate } from "react-router";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
 }
 
-const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-];
-
 export default function Cart() {
   const { getCart, cart, changeProductCount, deleteCartProduct } = useCart();
+  const navigate = useNavigate();
+  const [mail, setMail] = React.useState("");
+  const [name, setName] = React.useState("");
+  const [surname, setSurname] = React.useState("");
+  const [adres, setAdres] = React.useState("");
+  const [phone, setPhone] = React.useState("");
 
   console.log(cart);
   React.useEffect(() => {
@@ -30,59 +23,153 @@ export default function Cart() {
   }, []);
 
   const cartCleaner = () => {
+    if (!mail || !name || !surname || !adres || !phone) {
+      alert("Заполните все поля для покупки!");
+      return;
+    }
     localStorage.removeItem("cart");
+    navigate("/");
     getCart();
+    alert("Ваш заказ успешно отправлен!");
   };
 
   return (
-    <TableContainer sx={{ paddingTop: "4em" }} component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Picture</TableCell>
-            <TableCell align="right">Name</TableCell>
-            <TableCell align="right">Type</TableCell>
-            <TableCell align="right">Description</TableCell>
-            <TableCell align="right">Price</TableCell>
-            <TableCell align="right">Count</TableCell>
-            <TableCell align="right">subPrice</TableCell>
-            <TableCell align="right">-</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {cart?.products.map((row) => (
-            <TableRow
-              key={row.item.id}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+    <>
+      <div className="wine_card-box">
+        <div>
+          <div
+            style={{ position: "static", background: "none" }}
+            className={styles.addAlco_bg}
+          >
+            <Box
+              className={styles.addAclo_box}
+              sx={{
+                width: "50vw",
+                padding: "10vh",
+                margin: "20vh auto 0",
+                borderRadius: "1em",
+              }}
             >
-              <TableCell component="th" scope="row">
-                <img src={row.item.photo} width="70" height="70" alt="" />
-              </TableCell>
-              <TableCell align="right">{row.item.name}</TableCell>
-              <TableCell align="right">{row.item.type}</TableCell>
-              <TableCell align="right">{row.item.volume}</TableCell>
-              <TableCell align="right">{row.item.price}</TableCell>
-              <TableCell align="right">
+              <Typography variant="h4">Оплата заказа</Typography>
+              <Typography variant="h5">{cart?.totalPrice} ₽</Typography>
+              <TextField
+                sx={{ marginBottom: "10px" }}
+                fullWidth
+                id="outlined-basic"
+                label="Почта"
+                variant="outlined"
+                onChange={(e) => setMail(e.target.value)}
+                size="small"
+              />
+              <TextField
+                sx={{ marginBottom: "10px" }}
+                fullWidth
+                id="outlined-basic"
+                label="Имя"
+                variant="outlined"
+                onChange={(e) => setName(e.target.value)}
+                size="small"
+              />
+              <TextField
+                sx={{ marginBottom: "10px" }}
+                fullWidth
+                id="outlined-basic"
+                label="Фамилия"
+                variant="outlined"
+                onChange={(e) => setSurname(e.target.value)}
+                size="small"
+              />
+              <TextField
+                sx={{ marginBottom: "10px" }}
+                fullWidth
+                id="outlined-basic"
+                label="Адрес"
+                variant="outlined"
+                onChange={(e) => setAdres(e.target.value)}
+                size="small"
+              />
+              <TextField
+                sx={{ marginBottom: "10px" }}
+                fullWidth
+                id="outlined-basic"
+                label="Номер тел."
+                variant="outlined"
+                onChange={(e) => setPhone(e.target.value)}
+                size="small"
+              />
+
+              <button className="btn__shopCart" onClick={cartCleaner}>
+                Оплатить
+              </button>
+            </Box>
+          </div>
+        </div>
+        <div className="wine_container">
+          {cart?.products.map((row) => (
+            <div className="wine__photo" key={row.item.id} style={{
+    justifyContent: "space-between",
+
+            }}>
+              <img
+                src={row.item.photo}
+                className="img_from_cardjson"
+                alt=""
+              />
+              <div className="wine__info">
+                <h6 className="wine__name">Название: {row.item.name}</h6>
+                <h6 className="wine__title">Год: {row.item.year}</h6>
+                <h6 className="wine__date">Страна: {row.item.country}</h6>
+                <h6 className="wine__date">Тип: {row.item.type}</h6>
+                <h6 className="wine__date">Сорт: {row.item.grapes}</h6>
+                <h6 className="wine__date">Крепость: {row.item.strong}</h6>
+                <h6 className="wine__date">Обьем: {row.item.volume}</h6>
+                <h6 className="wine__date">Цена: {row.item.price}</h6>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  gap: "1em",
+                  paddingRight: "2em",
+                }}
+              >
+                <h5 className="wine__title">количество:</h5>
                 <input
-                  type="number"
+                  type="text"
                   onChange={(e) =>
                     changeProductCount(e.target.value, row.item.id)
                   }
                   value={row.count}
                   min={1}
+                  style={{
+                    outline: 0,
+                    border: "none",
+                    height: "5vh",
+                    width: "8vw",
+                    fontSize: "2em",
+                    background: "none",
+                  }}
                 />
-              </TableCell>
-              <TableCell align="right">{row.subPrice} ₽</TableCell>
-              <TableCell align="right">
-                <button onClick={() => deleteCartProduct(row.item.id)}>
+                <h4 align="right">Итого: {row.subPrice} ₽</h4>
+                <button
+                  onClick={() => deleteCartProduct(row.item.id)}
+                  style={{
+                    border: "none",
+                    borderRadius: "4px",
+                    padding: "0.7em 1em",
+                    fontWeight: "600",
+                    backgroundColor: "brown",
+                    cursor: "pointer",
+                  }}
+                >
                   DELETE
                 </button>
-              </TableCell>
-            </TableRow>
+              </div>
+            </div>
           ))}
-        </TableBody>
-      </Table>
-      <Button onClick={cartCleaner}> BUY NOW FOR {cart?.totalPrice} ₽</Button>
-    </TableContainer>
+        </div>
+      </div>
+    </>
   );
 }

@@ -13,7 +13,7 @@
       "id": 1
     },
     {
-      "name": "L'Ermita Velles Vinyes, Alvaro Palacios",
+      "name": "L'Ermita Velles Vinyes",
       "photo": "https://winemore.ru/upload/iblock/82d/2k2bqp12g2vwf4xdtiw9hsoet4lpvnit/03daa95db328b10c0546dcbb61e92ea0.png",
       "year": "2011",
       "country": "Испания, Каталония",
@@ -97,7 +97,7 @@
       "id": 8
     },
     {
-      "name": "L’Hermitage Blanc , Jean-Louis Chave",
+      "name": "L’Hermitage Blanc",
       "photo": "https://images.vivino.com/thumbs/qhSRAmvISw-I2Wbf1XeDMA_pb_x960.png",
       "year": "2015",
       "country": "Франция, Долина Роны",
@@ -147,7 +147,7 @@
   ],
   "whiskey": [
     {
-      "name": "Bunnahabhain aged 25 years",
+      "name": "Bunnahabhain",
       "photo": "https://winemore.ru/upload/iblock/35b/i8s0sehascoszj3kom0rsykqsufxniwf/viski-bunnahabhain-1980-limited-edition_1.png",
       "year": "1980",
       "country": "Шотландия, Айла",
@@ -156,7 +156,7 @@
       "strong": "49.5%",
       "volume": "0.7 л",
       "price": 624990,
-      "id": 1
+      "id": 13
     },
     {
       "name": "Rosebank Aged 30 Years",
@@ -168,7 +168,7 @@
       "strong": "48.6%",
       "volume": "0.7 л",
       "price": 399990,
-      "id": 2
+      "id": 14
     },
     {
       "name": "Braes of Glenlivet Aged 27 Years",
@@ -180,7 +180,7 @@
       "strong": "48%",
       "volume": "0.7 л",
       "price": 73900,
-      "id": 3
+      "id": 15
     },
     {
       "name": "Glen Keith 25 Years Old",
@@ -191,8 +191,8 @@
       "barrel": "из американского дуба и бочках hogsheads и butts",
       "strong": "43%",
       "volume": "0.7 л",
-      "price": "59 990 ₽",
-      "id": 4
+      "price": 59990,
+      "id": 16
     },
     {
       "name": "Michter's 10-Years Bourbon Whiskey",
@@ -203,11 +203,11 @@
       "barrel": "из новых, обожжёных бочках из американского дуба",
       "strong": "47.2%",
       "volume": "0.7 л",
-      "price": "29 990 ₽",
-      "id": 5
+      "price": 29990,
+      "id": 17
     },
     {
-      "name": "Kavalan Solist Vinho Barrique",
+      "name": "Kavalan Solist",
       "photo": "https://luding.ru/upload/resize_cache/iblock/382/800_900_0/cd7rh1naldea6wn4bjy3rgufqlrz1zr8.png",
       "year": "2020",
       "country": "Тайвань, И-Лан",
@@ -215,8 +215,8 @@
       "barrel": "100% в маленьких, специально обработанных бочках из-под красного вина. Бочки были «побриты»-«поджарены»-«повторно обуглены»",
       "strong": "54%",
       "volume": "0.7 л",
-      "price": "29 590 ₽",
-      "id": 6
+      "price": 29590,
+      "id": 18
     },
     {
       "name": "Chivas Royal Salute 21 years old",
@@ -227,11 +227,11 @@
       "barrel": "из дуба",
       "strong": "40%",
       "volume": "0.7 л",
-      "price": "28 940 ₽",
-      "id": 7
+      "price": 28940,
+      "id": 19
     },
     {
-      "name": "Bunnahabhain Aged 25 Years",
+      "name": "Bunnahabhain",
       "photo": "https://cdn.shopify.com/s/files/1/0564/4759/8771/products/Bunnahabhain-Product-ContentBUNNA-25-_HERO_1200x1200.png?v=1626889415",
       "year": "1998",
       "country": "Шотландия, Айла",
@@ -239,8 +239,8 @@
       "barrel": "из дуба",
       "strong": "46.3%",
       "volume": "0.7 л",
-      "price": "99 990 ₽",
-      "id": 8
+      "price": 99990,
+      "id": 20
     },
     {
       "name": "Caperdonich 25 Years Old",
@@ -251,8 +251,8 @@
       "barrel": "из американского дуба",
       "strong": "48%",
       "volume": "0.7 л",
-      "price": "73 290 ₽",
-      "id": 9
+      "price": 73290,
+      "id": 21
     },
     {
       "name": "Dalwhinnie 30 YO SR’20",
@@ -263,8 +263,8 @@
       "barrel": "из дуба",
       "strong": "54.7%",
       "volume": "0.7 л",
-      "price": "69 990 ₽",
-      "id": 10
+      "price": 69990,
+      "id": 22
     },
     {
       "name": "Nikka Yoichi Single Malt Non-Peated",
@@ -275,8 +275,8 @@
       "barrel": "из белого американского дуба",
       "strong": "47%",
       "volume": "0.7 л",
-      "price": "54 990 ₽",
-      "id": 11
+      "price": 54990,
+      "id": 23
     },
     {
       "name": "Talisker 8 Years",
@@ -287,8 +287,8 @@
       "barrel": "из-под рома",
       "strong": "59.7%",
       "volume": "0.7 л",
-      "price": "25 590 ₽",
-      "id": 12
+      "price": 25590,
+      "id": 24
     }
   ],
   "liquor": [
@@ -299,8 +299,8 @@
       "strong": "35%",
       "volume": "0.7 л",
       "type": "Травяное",
-      "price": "4 490 ₽",
-      "id": 1
+      "price": 4490,
+      "id": 25
     },
     {
       "name": "Nonino Botanical Drink",
@@ -309,18 +309,18 @@
       "strong": "21%",
       "volume": "0.7 л",
       "type": "Фруктовое",
-      "price": "4 490 ₽",
-      "id": 2
+      "price": 4490,
+      "id": 26
     },
     {
-      "name": "Monnet's Salamander",
+      "name": "Monnet's S",
       "photo": "https://media.danmurphys.com.au/dmo/product/2000004374-SALAMA6000-BTL-1.png",
       "country": "Франция, Коньяк",
       "strong": "30%",
       "volume": "0.5 л",
       "type": "Травяное",
-      "price": "2 790 ₽",
-      "id": 3
+      "price": 2790,
+      "id": 27
     },
     {
       "name": "Baileys",
@@ -329,8 +329,8 @@
       "strong": "17%",
       "volume": "0.7 л",
       "type": "Фруктовое",
-      "price": "1 690 ₽",
-      "id": 4
+      "price": 1690,
+      "id": 28
     },
     {
       "name": "Саке KOI",
@@ -339,18 +339,18 @@
       "strong": "17%",
       "volume": "0.72 л",
       "type": "Травяное",
-      "price": "13 990 ₽",
-      "id": 5
+      "price": 13990,
+      "id": 29
     },
     {
-      "name": "Саке Dewatsuru Junmai Daiginjo Hihaku",
+      "name": "Саке Dewatsuru",
       "photo": "https://alcomarket.ru/upload/iblock/7a9/sake_dewatsuru_junmai_daiginjo_hihaku_1.png",
       "country": "Япония, Акита",
       "strong": "16%",
       "volume": "0.72 л",
       "type": "Фруктовое",
-      "price": "8 490 ₽",
-      "id": 6
+      "price": 8490,
+      "id": 30
     },
     {
       "name": "Kaiun Junmai Daiginjo",
@@ -359,48 +359,48 @@
       "strong": "16%",
       "volume": "0.72 л",
       "type": "Травяное",
-      "price": "7 990 ₽",
-      "id": 7
+      "price": 7990,
+      "id": 31
     },
     {
-      "name": "Grand Marnier Cordon rouge",
+      "name": "Grand Marn",
       "photo": "https://clink.ph/cdn/shop/products/WEB-grand-marnier-cordon-rouge.png?v=1622108140",
       "country": "Франция, Коньяк",
       "strong": "40%",
       "volume": "0.7 л",
       "type": "Фруктовое",
-      "price": "3 990 ₽",
-      "id": 8
+      "price": 3990,
+      "id": 32
     },
     {
-      "name": "Prunella Mandorlata",
+      "name": "Prunella M",
       "photo": "https://simplewine.ru/upload/iblock/48b/liker-prunella-mandorlata_1.png",
-      "country": "Италия, Фриули-Венеция-Джулия",
+      "country": "Италия, Фриули-Венеция",
       "strong": "33%",
       "volume": "0.7 л",
       "type": "Травяное",
-      "price": "3 990 ₽",
-      "id": 9
+      "price": 3990,
+      "id": 33
     },
     {
-      "name": "Portobello Road Sloeberry and Blackcurrant",
+      "name": "Portobello Road Sloeberry",
       "photo": "https://winemore.ru/upload/iblock/8cd/b0zstxp7o9gwtd0jg7ixgf2hpnjyih1h/facd38514f0dbcc5c99e5db5bbda06a5.png",
       "country": "Соединенное Королевство",
       "strong": "28%",
       "volume": "0.5 л",
       "type": "Фруктовое",
-      "price": "4 790 ₽",
-      "id": 10
+      "price": 4790,
+      "id": 34
     },
     {
-      "name": "Саке Umenishiki Hime no Ai Tenmi",
+      "name": "Саке Umen",
       "photo": "https://simplewine.ru/upload/iblock/d8b/sake-umenishiki-hime-no-ai-tenmi_1.png",
       "country": "Япония, Эхимэ",
       "strong": "15.4%",
       "volume": "0.75 л",
       "type": "Травяное",
-      "price": "12 490 ₽",
-      "id": 11
+      "price": 12490,
+      "id": 35
     },
     {
       "name": "Amaro Santoni",
@@ -409,90 +409,81 @@
       "strong": "16%",
       "volume": "0.5 л",
       "type": "Фруктовое",
-      "price": "3 990 ₽",
-      "id": 12
+      "price": 3990,
+      "id": 36
     }
   ],
   "gin": [
     {
-      "name": "Nikka Coffey Gin",
+      "name": "Nikka Coffey",
       "photo": "https://www.beowein.de/WebRoot/Store8/Shops/Shop538/5A2A/BBB3/6C88/F26A/97E4/AC14/500C/F776/10666_nikka_coffey_gin_fl_gh.png",
       "country": "Япония, Мияги",
       "strong": "47%",
       "volume": "0.7 л",
       "type": "Лондонский",
-      "price": "9 990 ₽",
-      "id": 1
+      "price": 9990,
+      "id": 37
     },
     {
-      "name": "Valdespino Dry Gin",
+      "name": "Valdespino",
       "photo": "https://simplewine.ru/upload/iblock/85d/85d0d60ab14a6434b371579182060110.png",
       "country": "Испания, Андалусия",
       "strong": "41.3%",
       "volume": "0.7 л",
       "type": "Американское",
-      "price": "8 990 ₽",
-      "id": 2
+      "price": 8990,
+      "id": 38
     },
     {
-      "name": "Monkey 47 Schwarzwald Dry Gin",
+      "name": "Monkey 47",
       "photo": "https://www.mywinestore.it/1935-large_default/monkey-47-schwarzwald-dry-gin.jpg",
       "country": "Германия",
       "strong": "47%",
       "volume": "0.5 л",
       "type": "Лондонский",
-      "price": "8 890 ₽",
-      "id": 3
+      "price": 8890,
+      "id": 39
     },
     {
-      "name": "Gin Mare Capri",
+      "name": "Gin Mare",
       "photo": "https://vida.bg/wp-content/uploads/2022/09/Gin-Mare-Capri-0.7.png",
       "country": "Испания, Каталония",
       "strong": "42.7%",
       "volume": "0.7 л",
       "type": "Американское",
-      "price": "6 890 ₽",
-      "id": 4
+      "price": 6890,
+      "id": 40
     },
     {
-      "name": "Drumshanbo Gunpowder Irish Gin",
+      "name": "Drumshanbo",
       "photo": "https://cdn.shopify.com/s/files/1/0355/1929/9715/products/DrumshanboGunpowderIrishGin_1000x.png?v=1593806506",
       "country": "Ирландия",
       "strong": "43%",
       "volume": "0.7 л",
       "type": "Лондонский",
-      "price": "5 490 ₽",
-      "id": 5
+      "price": 5490,
+      "id": 41
     },
     {
-      "name": "Drumshanbo With Sardinian Gin",
+      "name": "Drumshanbo W",
       "photo": "https://cdn11.bigcommerce.com/s-oyi93ews/products/16598/images/12379/IMG_5729__31006.1660685536.900.900.png?c=2",
       "country": "Ирландия",
       "strong": "43%",
       "volume": "0.7 л",
       "type": "Американское",
-      "price": "4 790 ₽",
-      "id": 6
+      "price": 4790,
+      "id": 42
     },
     {
-      "name": "Drumshanbo With California Gin",
+      "name": "Drumshanbo W",
       "photo": "https://www.palmbay.com/sites/default/files/product/bottle/image/2023-02/DGIG_California-Orange-Citrus-PNG_web.png",
       "country": "Ирландия",
       "strong": "43%",
       "volume": "0.7 л",
       "type": "Лондонский",
-      "price": "5 390 ₽",
-      "id": 7
+      "price": 5390,
+      "id": 43
     }
   ],
-  "admin": [
-    {
-      "picture": "https://cdn2.veseloeradio.ru/vardata/modules/news/files/1/9829/news_file_9829_63c7dda52ab03.jpg",
-      "name": "egor",
-      "country": "asdas",
-      "volume": "asdasdd",
-      "price": null,
-      "id": 1
-    }
-  ]
+  "admin": []
 }

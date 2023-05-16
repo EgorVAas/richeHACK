@@ -4,7 +4,16 @@ import styles from "./styles/gin.module.css";
 import { useSearchParams } from "react-router-dom";
 import { JSON_API_GIN } from "../helpers/consts";
 import { useGin } from "../contexts/GinContextProvider";
-import { TextField, FormControlLabel, Radio, RadioGroup } from "@mui/material";
+import {
+  TextField,
+  FormControlLabel,
+  Radio,
+  RadioGroup,
+  IconButton,
+} from "@mui/material";
+import { useCart } from "../contexts/CartContextProvider";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import Footer from "./Footer";
 
 const API = JSON_API_GIN;
 
@@ -12,6 +21,7 @@ export default function Gin() {
   const { getProducts, productsGin, fetchByParams } = useGin();
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = React.useState(searchParams.get("q") || "");
+  const { addProductToCart, checkProductInCart } = useCart();
 
   React.useEffect(() => {
     getProducts();
@@ -44,6 +54,13 @@ export default function Gin() {
   // *Filter
   const DesignFilter = (
     <div className="wine__filterDesignContainer">
+      <TextField
+        type="text"
+        sx={{ width: "300px", height: "70px" }}
+        placeholder="Поиск Джин..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
       <h2>Найти по категории!</h2>
       <div className="wine__filterDesign">
         <RadioGroup
@@ -73,17 +90,10 @@ export default function Gin() {
     <div>
       <div className={styles.gin_div}></div>
       <div className={styles.gin_card_box} style={{ paddingTop: "6em" }}>
-        <TextField
-          type="text"
-          sx={{ width: "300px", height: "70px" }}
-          placeholder="Поиск Вина"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
         {DesignFilter}
         <div className="wine_container">
           {productsGin?.map((item) => (
-            <div className={styles.gin__photo} key={item.id}>
+            <div id="gin__photo" className={styles.gin__photo} key={item.id}>
               <img className={styles.img_from_cardjson} src={item.photo} />
               <div className="wine__info">
                 <h6 className="wine__name">Название: {item.name}</h6>
@@ -92,6 +102,14 @@ export default function Gin() {
                 <h6 className="wine__date">Обьем: {item.volume}</h6>
                 <h6 className="wine__date">Тип: {item.type}</h6>
                 <h6 className="wine__date">Цена: {item.price}</h6>
+                <IconButton
+                  sx={{ width: "3vw" }}
+                  onClick={() => addProductToCart(item)}
+                >
+                  <AddShoppingCartIcon
+                    color={checkProductInCart(item.id) ? "primary" : ""}
+                  />
+                </IconButton>
               </div>
             </div>
           ))}
