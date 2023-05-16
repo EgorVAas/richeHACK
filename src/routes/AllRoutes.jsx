@@ -13,6 +13,7 @@ import { useAuth } from "../contexts/AuthContextProvider";
 import { ADMIN } from "../helpers/consts";
 import AdminAlco from "../components/admin/AdminAlco";
 import Cart from "../components/cart/Cart";
+import Favorites from "../components/cart/Favorites";
 
 const AllRoutes = () => {
 
@@ -26,6 +27,7 @@ const AllRoutes = () => {
         {link: "/auth", element: <Auth/>, id: 6},
         {link: "*", element: <NotFoundPage/>, id: 7},
         {link: "/cart", element: <Cart/>, id: 8},
+        {link: "/fav", element: <Favorites/>, id: 9},
     ]
 
     const ADMIN_PAGES = [

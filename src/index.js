@@ -10,24 +10,27 @@ import LiquorContextProvider from "./contexts/LiquorContextProvider";
 import GinContextProvider from "./contexts/GinContextProvider";
 import AdminContextProvider from "./contexts/AdminContextProvider";
 import CartContextProvider from "./contexts/CartContextProvider";
+import FavContextProvider from "./contexts/FavContextProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-  <CartContextProvider>
-    <AdminContextProvider>
-      <GinContextProvider>
-        <LiquorContextProvider>
-          <WhiskeyContextProvider>
-            <AuthContextProvider>
-              <ProductsContextProvider>
-                <App />
-              </ProductsContextProvider>
-            </AuthContextProvider>
-          </WhiskeyContextProvider>
-        </LiquorContextProvider>
-      </GinContextProvider>
-    </AdminContextProvider>
-    </CartContextProvider>
+    <FavContextProvider>
+      <CartContextProvider>
+        <AdminContextProvider>
+          <GinContextProvider>
+            <LiquorContextProvider>
+              <WhiskeyContextProvider>
+                <AuthContextProvider>
+                  <ProductsContextProvider>
+                    <App />
+                  </ProductsContextProvider>
+                </AuthContextProvider>
+              </WhiskeyContextProvider>
+            </LiquorContextProvider>
+          </GinContextProvider>
+        </AdminContextProvider>
+      </CartContextProvider>
+    </FavContextProvider>
   </BrowserRouter>
 );
