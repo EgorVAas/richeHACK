@@ -25,9 +25,9 @@
   background-size: contain;
 }
 .img_from_cardjson {
-  margin: 1em 1em;
+  margin: 1em 0 0 1em;
   border-radius: 1em;
-  width: 10%;
+  /* width: 10%; */
   height: 320px;
 }
 .wine__info {
@@ -55,4 +55,20 @@
   border: 2px solid black;
   border-radius: 1em;
   margin-bottom: 1em;
+}
+.btn__shopCart{
+  background-color: rgba(201, 159, 82, 0.747);
+  border: none;
+  padding: 1em 2em;
+  border-radius: 1em;
+  cursor: pointer;
+  margin-top: 1em;
+  font-weight: bold;
+  transition: 0.2s;
+  width: 30vw;  
+  margin-left: 5em;
+}
+.btn__shopCart:hover{
+  background-color: rgb(190, 149, 73);
+  transform: scale(1.1);
 }

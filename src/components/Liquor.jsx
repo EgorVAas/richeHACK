@@ -4,13 +4,22 @@ import styles from "./styles/liquor.module.css";
 import { useSearchParams } from "react-router-dom";
 import { JSON_API_LIQUOR } from "../helpers/consts";
 import { useLiquor } from "../contexts/LiquorContextProvider";
-import { TextField, FormControlLabel, Radio, RadioGroup } from "@mui/material";
+import {
+  TextField,
+  FormControlLabel,
+  Radio,
+  RadioGroup,
+  IconButton,
+} from "@mui/material";
+import { useCart } from "../contexts/CartContextProvider";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 const API = JSON_API_LIQUOR;
 
 export default function Liquor() {
   const { getProducts, productsLiquor, fetchByParams } = useLiquor();
   const [searchParams, setSearchParams] = useSearchParams();
+  const { addProductToCart, checkProductInCart } = useCart();
   const [search, setSearch] = React.useState(searchParams.get("q") || "");
 
   React.useEffect(() => {
@@ -44,6 +53,13 @@ export default function Liquor() {
   // *Filter
   const DesignFilter = (
     <div className={styles.liquor__filterDesignContainer}>
+      <TextField
+        type="text"
+        sx={{ width: "300px", height: "70px" }}
+        placeholder="Поиск Ликёр..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
       <h2>Найти по категории!</h2>
       <div className="wine__filterDesign">
         <RadioGroup
@@ -71,17 +87,10 @@ export default function Liquor() {
   // *Filter
   return (
     <div className={styles.liq_card_box} style={{ paddingTop: "6em" }}>
-      <TextField
-        type="text"
-        sx={{ width: "300px", height: "70px" }}
-        placeholder="Поиск Вина"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
       {DesignFilter}
       <div className="wine_container">
         {productsLiquor?.map((item) => (
-          <div className={styles.liq__photo} key={item.id}>
+          <div id="liq__photo" className={styles.liq__photo} key={item.id}>
             <img className={styles.img_from_cardjson} src={item.photo} />
             <div className="wine__info">
               <h6 className="wine__name">Название: {item.name}</h6>
@@ -90,6 +99,14 @@ export default function Liquor() {
               <h6 className="wine__date">Обьем: {item.volume}</h6>
               <h6 className="wine__date">Тип: {item.type}</h6>
               <h6 className="wine__date">Цена: {item.price}</h6>
+              <IconButton
+                sx={{ width: "3vw" }}
+                onClick={() => addProductToCart(item)}
+              >
+                <AddShoppingCartIcon
+                  color={checkProductInCart(item.id) ? "primary" : ""}
+                />
+              </IconButton>
             </div>
           </div>
         ))}

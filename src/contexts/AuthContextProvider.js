@@ -40,7 +40,7 @@ const AuthContextProvider = ({ children }) => {
           case "auth/weak-password":
             setPasswordError(err.message);
             break;
-
+            
           default:
             break;
         }
