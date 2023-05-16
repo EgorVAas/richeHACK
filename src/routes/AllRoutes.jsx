@@ -15,23 +15,23 @@ import AdminAlco from "../components/admin/AdminAlco";
 import CartPage from "../components/CartPage";
 
 const AllRoutes = () => {
+  const { user } = useAuth();
+  const PAGES_ROUTES = [
+    { link: "/", element: <Main />, id: 1 },
+    { link: "/wine", element: <Wine />, id: 2 },
+    { link: "/whiskey", element: <Whiskey />, id: 3 },
+    { link: "/liquor", element: <Liquor />, id: 4 },
+    { link: "/gin", element: <Gin />, id: 5 },
+    { link: "/auth", element: <Auth />, id: 6 },
+    { link: "*", element: <NotFoundPage />, id: 7 },
+    { link: "/cart", element: <CartPage />, id: 7 },
+  ];
 
-    const {user} = useAuth()
-    const PAGES_ROUTES = [
-        {link: "/", element: <Main/>, id: 1},
-        {link: "/wine", element: <Wine/>, id: 2},
-        {link: "/whiskey", element: <Whiskey/>, id: 3},
-        {link: "/liquor", element: <Liquor/>, id: 4},
-        {link: "/gin", element: <Gin/>, id: 5},
-        {link: "/auth", element: <Auth/>, id: 6},
-        {link: "*", element: <NotFoundPage/>, id: 7},
-    ]
-
-    const ADMIN_PAGES = [
-        {link: "/admin-alco", element: <AdminAlco/>, id: 8},
-        {link: "/add-alco", element: <AddAlco/>, id: 9},
-        {link: "/edit/:id", element: <EditAlco/>, id: 10},
-    ]
+  const ADMIN_PAGES = [
+    { link: "/admin-alco", element: <AdminAlco />, id: 8 },
+    { link: "/add-alco", element: <AddAlco />, id: 9 },
+    { link: "/edit/:id", element: <EditAlco />, id: 10 },
+  ];
   return (
     <>
       <Routes>
@@ -39,12 +39,22 @@ const AllRoutes = () => {
           <Route path={elem.link} key={elem.id} element={elem.element} />
         ))}
 
-            {user? ADMIN_PAGES.map((elem) => (
-                <Route path={elem.link} key={elem.id} element={
-                    user.email === ADMIN ? (elem.element): (<Navigate replace to='*'/>)
-                }/>
-            )): null}
-        </Routes>
+        {user
+          ? ADMIN_PAGES.map((elem) => (
+              <Route
+                path={elem.link}
+                key={elem.id}
+                element={
+                  user.email === ADMIN ? (
+                    elem.element
+                  ) : (
+                    <Navigate replace to="*" />
+                  )
+                }
+              />
+            ))
+          : null}
+      </Routes>
     </>
   );
 };
