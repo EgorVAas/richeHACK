@@ -24,7 +24,7 @@ const AllRoutes = () => {
     { link: "/gin", element: <Gin />, id: 5 },
     { link: "/auth", element: <Auth />, id: 6 },
     { link: "*", element: <NotFoundPage />, id: 7 },
-    { link: "/cart", element: <CartPage />, id: 7 },
+    { link: "/cart", element: <Cart />, id: 7 },
   ];
 
   const ADMIN_PAGES = [
