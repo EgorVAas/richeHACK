@@ -11,7 +11,6 @@ const AddAlco = () => {
     volume: "",
     price: 0,
   });
-  console.log(product);
   const handleInp = (e) => {
     if (e.target.name === "price") {
       let obj = {

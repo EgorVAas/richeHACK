@@ -9,7 +9,6 @@ export function getCountProductsInFav() {
 }
 
 export const calcSubPrice = (product) => {
-  console.log(+product);
   return +product.count * product.item.price;
 };
 

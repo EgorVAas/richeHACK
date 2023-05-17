@@ -10,7 +10,9 @@
       "strong": "12.5%",
       "volume": "0.75 л",
       "price": 242490,
-      "id": 1
+      "id": 1,
+      "comments": ["Вино просто Бомба!"],
+      "like": 7
     },
     {
       "name": "L'Ermita Velles Vinyes",
@@ -22,7 +24,8 @@
       "strong": "15%",
       "volume": "0.75 л",
       "price": 184990,
-      "id": 2
+      "id": 2,
+      "comments": ["Топчик!"]
     },
     {
       "name": "Sassicaia, Tenuta San Guido",
@@ -156,7 +159,8 @@
       "strong": "49.5%",
       "volume": "0.7 л",
       "price": 624990,
-      "id": 13
+      "id": 13,
+      "like": 10
     },
     {
       "name": "Rosebank Aged 30 Years",
@@ -168,7 +172,9 @@
       "strong": "48.6%",
       "volume": "0.7 л",
       "price": 399990,
-      "id": 14
+      "id": 14,
+      "comments": ["Виски лучщие!"],
+      "like": 2
     },
     {
       "name": "Braes of Glenlivet Aged 27 Years",
@@ -300,7 +306,9 @@
       "volume": "0.7 л",
       "type": "Травяное",
       "price": 4490,
-      "id": 25
+      "id": 25,
+      "comments": ["Ликёр бомба!"],
+      "like": 2
     },
     {
       "name": "Nonino Botanical Drink",
@@ -310,7 +318,8 @@
       "volume": "0.7 л",
       "type": "Фруктовое",
       "price": 4490,
-      "id": 26
+      "id": 26,
+      "like": 1
     },
     {
       "name": "Monnet's S",
@@ -422,7 +431,9 @@
       "volume": "0.7 л",
       "type": "Лондонский",
       "price": 9990,
-      "id": 37
+      "id": 37,
+      "comments": ["Джин лучще не пробовал!"],
+      "like": 1
     },
     {
       "name": "Valdespino",
@@ -442,7 +453,8 @@
       "volume": "0.5 л",
       "type": "Лондонский",
       "price": 8890,
-      "id": 39
+      "id": 39,
+      "like": 1
     },
     {
       "name": "Gin Mare",
@@ -452,7 +464,8 @@
       "volume": "0.7 л",
       "type": "Американское",
       "price": 6890,
-      "id": 40
+      "id": 40,
+      "like": 1
     },
     {
       "name": "Drumshanbo",
@@ -487,12 +500,17 @@
   ],
   "admin": [
     {
-      "picture": "123",
-      "name": "23",
-      "country": "12",
-      "volume": "1",
-      "price": 1,
-      "id": 1
+      "picture": "asdasdasd",
+      "name": "Chateau Lafite Rothschild",
+      "country": "Франция, Бордо",
+      "volume": "0.75 л",
+      "price": 242490,
+      "id": 1,
+      "photo": "https://www.koelner-weinkeller.de/media/image/af/8e/51/2017-Chateau-Lafite-Rothschild-20253-17_1280x1280.png",
+      "year": "2007",
+      "type": "Красное, сухое",
+      "grapes": "каберне совиньон 84%, мерло 15%, пти вердо 1%",
+      "strong": "12.5%"
     }
   ]
 }

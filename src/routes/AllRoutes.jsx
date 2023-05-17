@@ -14,6 +14,10 @@ import { ADMIN } from "../helpers/consts";
 import AdminAlco from "../components/admin/AdminAlco";
 import Cart from "../components/cart/Cart";
 import Favorites from "../components/cart/Favorites";
+import Comments from "../components/reviews/Comments";
+import CommentsWhiskey from "../components/reviews/CommentsWhiskey";
+import CommentsLiquor from "../components/reviews/CommentsLiquor";
+import CommentsGin from "../components/reviews/CommentsGin";
 
 const AllRoutes = () => {
   const { user } = useAuth();
@@ -27,6 +31,10 @@ const AllRoutes = () => {
     { link: "*", element: <NotFoundPage />, id: 7 },
     { link: "/cart", element: <Cart />, id: 8 },
     { link: "/fav", element: <Favorites />, id: 9 },
+    { link: "/comments/:id", element: <Comments />, id: 10 },
+    { link: "/comments-w/:id", element: <CommentsWhiskey />, id: 11 },
+    { link: "/comments-l/:id", element: <CommentsLiquor />, id: 12 },
+    { link: "/comments-g/:id", element: <CommentsGin />, id: 13 },
   ];
 
   const ADMIN_PAGES = [

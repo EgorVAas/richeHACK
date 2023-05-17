@@ -17,7 +17,6 @@ export default function Cart() {
   const [adres, setAdres] = React.useState("");
   const [phone, setPhone] = React.useState("");
 
-  console.log(cart);
   React.useEffect(() => {
     getCart();
   }, []);
