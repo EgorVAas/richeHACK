@@ -23,7 +23,7 @@ import LiquorIcon from "@mui/icons-material/Liquor";
 import AddCardIcon from "@mui/icons-material/AddCard";
 import RicheLogo from "../assets/RICHE logo.png";
 import { useFav } from "../contexts/FavContextProvider";
-import StarIcon from '@mui/icons-material/Star';
+import StarIcon from "@mui/icons-material/Star";
 
 const API = JSON_API_GIN;
 
@@ -113,7 +113,7 @@ export default function Gin() {
                 <h6 className="wine__date">Обьем: {item.volume}</h6>
                 <h6 className="wine__date">Тип: {item.type}</h6>
                 <h6 className="wine__date">Цена: {item.price}</h6>
-                <div style={{display: "flex"}}>
+                <div style={{ display: "flex" }}>
                   <IconButton
                     sx={{ width: "3vw" }}
                     onClick={() => addProductToCart(item)}
