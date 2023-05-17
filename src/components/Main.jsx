@@ -6,6 +6,15 @@ import Winebg from "../assets/wine-bg.png";
 import Whiskeybg from "../assets/whiskey-bg.png";
 import liquorbg from "../assets/liquor-bg.png";
 import ginbg from "../assets/gin-bg.png";
+import AirportShuttleIcon from "@mui/icons-material/AirportShuttle";
+import CallIcon from "@mui/icons-material/Call";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import LiquorIcon from "@mui/icons-material/Liquor";
+import AddCardIcon from "@mui/icons-material/AddCard";
+import RicheLogo from "../assets/RICHE logo.png";
 
 const Main = () => {
   return (
@@ -104,6 +113,55 @@ const Main = () => {
             Ликер известен своим богатым вкусом и ароматом, <br /> который может
             быть сладким, горьким или пряным.{" "}
           </p>
+        </div>
+      </div>
+      {/* footer */}
+      <div
+        style={{
+          width: "100%",
+          backgroundColor: "rgb(249, 214, 165)",
+          paddingTop: "1em",
+          paddingBottom: "1em",
+          marginTop: "1em"
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            flexWrap: "wrap",
+            borderBottom: "2 px solid black",
+          }}
+        >
+          <img style={{ width: "10vw", height: "15vh", marginTop: "4em" }} src={RicheLogo} alt="" />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.045645779053!2d74.58507277539424!3d42.87188070261396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec826a9279199%3A0xa864dba98b387b9f!2z0J3Rg9Cy0L7RgNC40Yg!5e0!3m2!1sru!2skg!4v1684230806207!5m2!1sru!2skg"
+            width="800"
+            height="250"
+            style={{ border: "0", borderRadius: "1em", marginTop: "1em" }}
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "3em",
+            width: "15vw",
+            flexWrap: "wrap",
+          }}
+        >
+          <AirportShuttleIcon sx={{ cursor: "pointer" }} />
+          <CallIcon sx={{ cursor: "pointer" }} />
+          <InstagramIcon sx={{ cursor: "pointer" }} />
+          <FacebookIcon sx={{ cursor: "pointer" }} />
+          <TwitterIcon sx={{ cursor: "pointer" }} />
+          <ShoppingCartIcon sx={{ cursor: "pointer" }} />
+          <LiquorIcon sx={{ cursor: "pointer" }} />
+          <AddCardIcon sx={{ cursor: "pointer" }} />
+        </div>
         </div>
       </div>
     </div>
