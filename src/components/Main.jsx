@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/main.css";
+import "./media/headerMedia.css"
 import Rich from "../assets/RICHE-name.png";
 import section1photo from "../assets/section1photo.jpg";
 import Winebg from "../assets/wine-bg.png";

@@ -16,7 +16,6 @@ const AdminAlco = () => {
   useEffect(() => {
     getProducts();
     setPage(1)
-    console.log("$$");
   },[searchParams])
 
   // pagination

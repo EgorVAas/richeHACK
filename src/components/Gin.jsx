@@ -1,7 +1,7 @@
 import * as React from "react";
 import axios from "axios";
 import styles from "./styles/gin.module.css";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { JSON_API_GIN } from "../helpers/consts";
 import { useGin } from "../contexts/GinContextProvider";
 import {
@@ -23,7 +23,9 @@ import LiquorIcon from "@mui/icons-material/Liquor";
 import AddCardIcon from "@mui/icons-material/AddCard";
 import RicheLogo from "../assets/RICHE logo.png";
 import { useFav } from "../contexts/FavContextProvider";
-import StarIcon from '@mui/icons-material/Star';
+import StarIcon from "@mui/icons-material/Star";
+import ChatIcon from "@mui/icons-material/Chat";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const API = JSON_API_GIN;
 
@@ -33,10 +35,10 @@ export default function Gin() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = React.useState(searchParams.get("q") || "");
   const { addProductToCart, checkProductInCart } = useCart();
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     getProducts();
-    console.log("$$");
   }, [searchParams]);
 
   React.useEffect(() => {
@@ -56,6 +58,10 @@ export default function Gin() {
     } catch (error) {
       console.log(error);
     }
+  };
+
+  const saveEditedProduct = async (newProduct) => {
+    await axios.patch(`${JSON_API_GIN}/${newProduct.id}`, newProduct);
   };
 
   React.useEffect(() => {
@@ -113,7 +119,7 @@ export default function Gin() {
                 <h6 className="wine__date">Обьем: {item.volume}</h6>
                 <h6 className="wine__date">Тип: {item.type}</h6>
                 <h6 className="wine__date">Цена: {item.price}</h6>
-                <div style={{display: "flex"}}>
+                <div style={{ display: "flex" }}>
                   <IconButton
                     sx={{ width: "3vw" }}
                     onClick={() => addProductToCart(item)}
@@ -130,6 +136,36 @@ export default function Gin() {
                       color={checkProductInFav(item.id) ? "warning" : ""}
                     />
                   </IconButton>
+                  <IconButton
+                    sx={{ width: "3vw" }}
+                    onClick={() => navigate(`/comments-g/${item.id}`)}
+                  >
+                    <ChatIcon />
+                  </IconButton>
+                  {!item.hasOwnProperty("like") ? (
+                    <IconButton
+                      sx={{ width: "3vw" }}
+                      onClick={() => {
+                        const newObj = { ...item, like: 1 };
+                        getProducts();
+                        saveEditedProduct(newObj);
+                      }}
+                    >
+                      <FavoriteIcon />
+                    </IconButton>
+                  ) : (
+                    <IconButton
+                      sx={{ width: "3vw" }}
+                      onClick={() => {
+                        const newObj = { ...item, like: item.like + 1};
+                        getProducts();
+                        saveEditedProduct(newObj);
+                      }}
+                    >
+                      <FavoriteIcon />
+                    </IconButton>
+                  )}
+                  {item.like}
                 </div>
               </div>
             </div>

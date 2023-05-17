@@ -57,4 +57,10 @@
     #gin__photo img {
         width: 90%;
     }
+
+}
+@media screen and (max-width: 683px) {
+    .WineLeftPhoto{
+        display: none;
+    }
 }
