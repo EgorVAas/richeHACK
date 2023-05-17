@@ -23,6 +23,7 @@
 .section1__velcome {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .section1__leftText {
   padding-bottom: 1em;

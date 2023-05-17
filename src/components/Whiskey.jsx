@@ -1,7 +1,7 @@
 import * as React from "react";
 import axios from "axios";
 import styles from "./styles/whiskey.module.css";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { JSON_API_WHISKEY } from "../helpers/consts";
 import { useWhiskey } from "../contexts/WhiskeyContextProvider";
 import {
@@ -23,9 +23,10 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LiquorIcon from "@mui/icons-material/Liquor";
 import AddCardIcon from "@mui/icons-material/AddCard";
 import RicheLogo from "../assets/RICHE logo.png";
-import StarIcon from '@mui/icons-material/Star';
+import StarIcon from "@mui/icons-material/Star";
 import { useFav } from "../contexts/FavContextProvider";
-
+import ChatIcon from "@mui/icons-material/Chat";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const API = JSON_API_WHISKEY;
 
@@ -35,8 +36,8 @@ export default function Whiskey() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = React.useState(searchParams.get("q") || "");
   const { addProductToCart, checkProductInCart } = useCart();
+  const navigate = useNavigate();
 
-  console.log(productsWhiskey);
   React.useEffect(() => {
     getProducts();
   }, [searchParams]);
@@ -57,6 +58,10 @@ export default function Whiskey() {
     } catch (error) {
       console.log(error);
     }
+  };
+
+  const saveEditedProduct = async (newProduct) => {
+    await axios.patch(`${JSON_API_WHISKEY}/${newProduct.id}`, newProduct);
   };
 
   React.useEffect(() => {
@@ -122,7 +127,7 @@ export default function Whiskey() {
                 <h6 className="wine__date">Крепость: {item.strong}</h6>
                 <h6 className="wine__date">Обьем: {item.volume}</h6>
                 <h6 className="wine__date">Цена: {item.price}</h6>
-                <div style={{display: "flex"}}>
+                <div style={{ display: "flex" }}>
                   <IconButton
                     sx={{ width: "3vw" }}
                     onClick={() => addProductToCart(item)}
@@ -139,6 +144,36 @@ export default function Whiskey() {
                       color={checkProductInFav(item.id) ? "warning" : ""}
                     />
                   </IconButton>
+                  <IconButton
+                    sx={{ width: "3vw" }}
+                    onClick={() => navigate(`/comments-w/${item.id}`)}
+                  >
+                    <ChatIcon />
+                  </IconButton>
+                  {!item.hasOwnProperty("like") ? (
+                    <IconButton
+                      sx={{ width: "3vw" }}
+                      onClick={() => {
+                        const newObj = { ...item, like: 1 };
+                        getProducts();
+                        saveEditedProduct(newObj);
+                      }}
+                    >
+                      <FavoriteIcon />
+                    </IconButton>
+                  ) : (
+                    <IconButton
+                      sx={{ width: "3vw" }}
+                      onClick={() => {
+                        const newObj = { ...item, like: item.like + 1};
+                        getProducts();
+                        saveEditedProduct(newObj);
+                      }}
+                    >
+                      <FavoriteIcon />
+                    </IconButton>
+                  )}
+                  {item.like}
                 </div>
               </div>
             </div>

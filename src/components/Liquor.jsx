@@ -1,7 +1,7 @@
 import * as React from "react";
 import axios from "axios";
 import styles from "./styles/liquor.module.css";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { JSON_API_LIQUOR } from "../helpers/consts";
 import { useLiquor } from "../contexts/LiquorContextProvider";
 import {
@@ -23,7 +23,9 @@ import LiquorIcon from "@mui/icons-material/Liquor";
 import AddCardIcon from "@mui/icons-material/AddCard";
 import RicheLogo from "../assets/RICHE logo.png";
 import { useFav } from "../contexts/FavContextProvider";
-import StarIcon from '@mui/icons-material/Star';
+import StarIcon from "@mui/icons-material/Star";
+import ChatIcon from "@mui/icons-material/Chat";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const API = JSON_API_LIQUOR;
 
@@ -33,10 +35,10 @@ export default function Liquor() {
   const [searchParams, setSearchParams] = useSearchParams();
   const { addProductToCart, checkProductInCart } = useCart();
   const [search, setSearch] = React.useState(searchParams.get("q") || "");
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     getProducts();
-    console.log("$$");
   }, [searchParams]);
 
   React.useEffect(() => {
@@ -58,6 +60,10 @@ export default function Liquor() {
     }
   };
 
+  const saveEditedProduct = async (newProduct) => {
+    await axios.patch(`${JSON_API_LIQUOR}/${newProduct.id}`, newProduct);
+  };
+
   React.useEffect(() => {
     getWine();
   }, []);
@@ -65,37 +71,37 @@ export default function Liquor() {
   // *Filter
   const DesignFilter = (
     <>
-    <div className={styles.liquor__filterDesignContainer}>
-      <TextField
-        type="text"
-        sx={{ width: "300px", height: "70px" }}
-        placeholder="Поиск Ликёр..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <h2>Найти по категории!</h2>
-      <div className="wine__filterDesign">
-        <RadioGroup
-          aria-labelledby="demo-radio-buttons-group-label"
-          sx={{ display: "flex", flexDirection: "row" }}
-          defaultValue="all"
-          name="radio-buttons-group"
-          onChange={(e) => fetchByParams("type", e.target.value)}
-        >
-          <FormControlLabel value="all" control={<Radio />} label="Все" />
-          <FormControlLabel
-            value="Травяное"
-            control={<Radio />}
-            label="Травяное"
-          />
-          <FormControlLabel
-            value="Фруктовое"
-            control={<Radio />}
-            label="Фруктовое"
-          />
-        </RadioGroup>
+      <div className={styles.liquor__filterDesignContainer}>
+        <TextField
+          type="text"
+          sx={{ width: "300px", height: "70px" }}
+          placeholder="Поиск Ликёр..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <h2>Найти по категории!</h2>
+        <div className="wine__filterDesign">
+          <RadioGroup
+            aria-labelledby="demo-radio-buttons-group-label"
+            sx={{ display: "flex", flexDirection: "row" }}
+            defaultValue="all"
+            name="radio-buttons-group"
+            onChange={(e) => fetchByParams("type", e.target.value)}
+          >
+            <FormControlLabel value="all" control={<Radio />} label="Все" />
+            <FormControlLabel
+              value="Травяное"
+              control={<Radio />}
+              label="Травяное"
+            />
+            <FormControlLabel
+              value="Фруктовое"
+              control={<Radio />}
+              label="Фруктовое"
+            />
+          </RadioGroup>
+        </div>
       </div>
-    </div>
     </>
   );
   // *Filter
@@ -113,24 +119,54 @@ export default function Liquor() {
               <h6 className="wine__date">Обьем: {item.volume}</h6>
               <h6 className="wine__date">Тип: {item.type}</h6>
               <h6 className="wine__date">Цена: {item.price}</h6>
-              <div style={{display: "flex"}}>
-                  <IconButton
-                    sx={{ width: "3vw" }}
-                    onClick={() => addProductToCart(item)}
-                  >
-                    <AddShoppingCartIcon
-                      color={checkProductInCart(item.id) ? "primary" : ""}
-                    />
-                  </IconButton>
-                  <IconButton
-                    sx={{ width: "3vw" }}
-                    onClick={() => addProductToFav(item)}
-                  >
-                    <StarIcon
-                      color={checkProductInFav(item.id) ? "warning" : ""}
-                    />
-                  </IconButton>
-                </div>
+              <div style={{ display: "flex" }}>
+                <IconButton
+                  sx={{ width: "3vw" }}
+                  onClick={() => addProductToCart(item)}
+                >
+                  <AddShoppingCartIcon
+                    color={checkProductInCart(item.id) ? "primary" : ""}
+                  />
+                </IconButton>
+                <IconButton
+                  sx={{ width: "3vw" }}
+                  onClick={() => addProductToFav(item)}
+                >
+                  <StarIcon
+                    color={checkProductInFav(item.id) ? "warning" : ""}
+                  />
+                </IconButton>
+                <IconButton
+                  sx={{ width: "3vw" }}
+                  onClick={() => navigate(`/comments-l/${item.id}`)}
+                >
+                  <ChatIcon />
+                </IconButton>
+                {!item.hasOwnProperty("like") ? (
+                    <IconButton
+                      sx={{ width: "3vw" }}
+                      onClick={() => {
+                        const newObj = { ...item, like: 1 };
+                        getProducts();
+                        saveEditedProduct(newObj);
+                      }}
+                    >
+                      <FavoriteIcon />
+                    </IconButton>
+                  ) : (
+                    <IconButton
+                      sx={{ width: "3vw" }}
+                      onClick={() => {
+                        const newObj = { ...item, like: item.like + 1};
+                        getProducts();
+                        saveEditedProduct(newObj);
+                      }}
+                    >
+                      <FavoriteIcon />
+                    </IconButton>
+                  )}
+                  {item.like}
+              </div>
             </div>
           </div>
         ))}

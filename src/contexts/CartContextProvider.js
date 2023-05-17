@@ -93,7 +93,6 @@ const CartContextProvider = ({ children }) => {
     cart.products = cart.products.map((product) => {
       if (product.item.id == id) {
         product.count = count;
-        console.log("product",product);
         product.subPrice = calcSubPrice(product);
       }
       return product;

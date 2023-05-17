@@ -6,7 +6,7 @@ import styles from "../styles/editaclo.module.css";
 
 const EditAlco = () => {
   const { saveEditedProduct, getProductDetails, productDetails } = useAdmin();
-  console.log(productDetails);
+
 
   const { id } = useParams();
 
@@ -19,7 +19,6 @@ const EditAlco = () => {
   }, [productDetails]);
 
   const [product, setProduct] = useState(productDetails);
-  console.log(product);
   const handleInp = (e) => {
     if (e.target.name === "price") {
       let obj = {
