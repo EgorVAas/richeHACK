@@ -103,15 +103,21 @@ export default function Header() {
           <Link to='/admin-alco'>
             <MenuItem>Мои напитки!</MenuItem>
           </Link>
-          <Link to="cart">
+          <Link to="/cart">
             <MenuItem>Корзина</MenuItem>
+          </Link>
+          <Link to="/fav">
+            <MenuItem>Избранное</MenuItem>
           </Link>
         </MenuList>
       ) : (
         <MenuList>
           <MenuItem onClick={() => navigate("/auth")}>Войти</MenuItem>
-          <Link to="cart">
+          <Link to="/cart">
             <MenuItem>Корзина</MenuItem>
+          </Link>
+          <Link to="/fav">
+            <MenuItem>Избранное</MenuItem>
           </Link>
         </MenuList>
       )}

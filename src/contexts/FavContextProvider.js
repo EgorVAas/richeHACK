@@ -1,21 +1,21 @@
 import { createContext, useContext, useReducer } from "react";
-import { CART } from "../helpers/consts";
-import { calcSubPrice, calcTotalPrice, getCountProductsInCart } from "../helpers/functions";
+import { FAV } from "../helpers/consts";
+import { calcSubPrice, calcTotalPrice, getCountProductsInFav } from "../helpers/functions";
 
-export const cartContext = createContext();
-export const useCart = () => useContext(cartContext);
+export const favContext = createContext();
+export const useFav = () => useContext(favContext);
 
 const INIT_STATE = {
-  cart: JSON.parse(localStorage.getItem("cart")),
-  cartLength: getCountProductsInCart(),
+  cart: JSON.parse(localStorage.getItem("fav")),
+  cartLength: getCountProductsInFav(),
 };
 
 function reducer(state = INIT_STATE, action) {
   switch (action.type) {
-    case CART.GET_CART:
+    case FAV.GET_FAV:
       return { ...state, cart: action.payload };
 
-    case CART.GET_CART_LENGTH:
+    case FAV.GET_FAV_LENGTH:
       return { ...state, cartLength: action.payload };
 
     default:
@@ -23,15 +23,15 @@ function reducer(state = INIT_STATE, action) {
   }
 }
 
-const CartContextProvider = ({ children }) => {
+const FavContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
   const getCart = () => {
-    let cart = JSON.parse(localStorage.getItem("cart"));
+    let cart = JSON.parse(localStorage.getItem("fav"));
 
     if (!cart) {
       localStorage.setItem(
-        "cart",
+        "fav",
         JSON.stringify({
           products: [],
           totalPrice: 0,
@@ -44,13 +44,13 @@ const CartContextProvider = ({ children }) => {
     }
 
     dispatch({
-      type: CART.GET_CART,
+      type: FAV.GET_FAV,
       payload: cart,
     });
   };
 
-  const addProductToCart = (product) => {
-    let cart = JSON.parse(localStorage.getItem("cart"));
+  const addProductToFav = (product) => {
+    let cart = JSON.parse(localStorage.getItem("fav"));
 
     if (!cart) {
       cart = { products: [], totalPrice: 0 };
@@ -74,12 +74,12 @@ const CartContextProvider = ({ children }) => {
     }
     cart.totalPrice = calcTotalPrice(cart.products);
 
-    localStorage.setItem("cart", JSON.stringify(cart));
-    dispatch({ type: CART.GET_CART, payload: cart });
+    localStorage.setItem("fav", JSON.stringify(cart));
+    dispatch({ type: FAV.GET_FAV, payload: cart });
   };
 
-  const checkProductInCart = (id) => {
-    let cart = JSON.parse(localStorage.getItem("cart"));
+  const checkProductInFav = (id) => {
+    let cart = JSON.parse(localStorage.getItem("fav"));
 
     if (cart) {
       let newCart = cart.products.filter((elem) => elem.item.id == id);
@@ -88,7 +88,7 @@ const CartContextProvider = ({ children }) => {
   };
 
   const changeProductCount = (count, id) => {
-    let cart = JSON.parse(localStorage.getItem("cart"));
+    let cart = JSON.parse(localStorage.getItem("fav"));
 
     cart.products = cart.products.map((product) => {
       if (product.item.id == id) {
@@ -100,36 +100,36 @@ const CartContextProvider = ({ children }) => {
     });
     cart.totalPrice = calcTotalPrice(cart.products);
 
-    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("fav", JSON.stringify(cart));
     dispatch({
-      type: CART.GET_CART,
+      type: FAV.GET_FAV,
       payload: cart,
     });
   };
 
   const deleteCartProduct = (id) => {
-    let cart = JSON.parse(localStorage.getItem("cart"));
+    let cart = JSON.parse(localStorage.getItem("fav"));
 
     cart.products = cart.products.filter((elem) => elem.item.id !== id);
 
     cart.totalPrice = calcTotalPrice(cart.products);
-    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("fav", JSON.stringify(cart));
 
     dispatch({
-      type: CART.GET_CART,
+      type: FAV.GET_FAV,
       payload: cart,
     });
   };
 
   const values = {
     getCart,
-    addProductToCart,
-    checkProductInCart,
+    addProductToFav,
+    checkProductInFav,
     cart: state.cart,
     changeProductCount,
     deleteCartProduct,
   };
-  return <cartContext.Provider value={values}>{children}</cartContext.Provider>;
+  return <favContext.Provider value={values}>{children}</favContext.Provider>;
 };
 
-export default CartContextProvider;
+export default FavContextProvider;
