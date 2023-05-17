@@ -11,8 +11,10 @@
       "volume": "0.75 л",
       "price": 242490,
       "id": 1,
-      "comments": ["Вино просто Бомба!"],
-      "like": 7
+      "comments": [
+        "Вино просто Бомба!"
+      ],
+      "like": 10
     },
     {
       "name": "L'Ermita Velles Vinyes",
@@ -25,7 +27,9 @@
       "volume": "0.75 л",
       "price": 184990,
       "id": 2,
-      "comments": ["Топчик!"]
+      "comments": [
+        "Топчик!"
+      ]
     },
     {
       "name": "Sassicaia, Tenuta San Guido",
@@ -173,7 +177,9 @@
       "volume": "0.7 л",
       "price": 399990,
       "id": 14,
-      "comments": ["Виски лучщие!"],
+      "comments": [
+        "Виски лучщие!"
+      ],
       "like": 2
     },
     {
@@ -307,7 +313,9 @@
       "type": "Травяное",
       "price": 4490,
       "id": 25,
-      "comments": ["Ликёр бомба!"],
+      "comments": [
+        "Ликёр бомба!"
+      ],
       "like": 2
     },
     {
@@ -432,7 +440,9 @@
       "type": "Лондонский",
       "price": 9990,
       "id": 37,
-      "comments": ["Джин лучще не пробовал!"],
+      "comments": [
+        "Джин лучще не пробовал!"
+      ],
       "like": 1
     },
     {
@@ -501,7 +511,7 @@
   "admin": [
     {
       "picture": "asdasdasd",
-      "name": "Chateau Lafite Rothschild",
+      "name": " Lafite Rothschild",
       "country": "Франция, Бордо",
       "volume": "0.75 л",
       "price": 242490,
@@ -511,6 +521,14 @@
       "type": "Красное, сухое",
       "grapes": "каберне совиньон 84%, мерло 15%, пти вердо 1%",
       "strong": "12.5%"
+    },
+    {
+      "picture": "https://i.pinimg.com/736x/fe/09/3b/fe093b56d40d12d04b51ab4171897d26.jpg",
+      "name": "qwe",
+      "country": "qwe",
+      "volume": "qwe",
+      "price": 123,
+      "id": 2
     }
   ]
 }
